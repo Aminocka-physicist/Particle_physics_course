@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Авторский мини-курс по физике элементарных частиц для студентов-физиков. Теория, интерактивные задания, тесты и сертификат.">
+<meta name="color-scheme" content="light">
+<title>Aminochka-Physicist · Физика элементарных частиц</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%20fill%3D%22none%22%3E%3Cg%20stroke%3D%22%2345628a%22%20stroke-width%3D%223%22%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2250%22%20rx%3D%2242%22%20ry%3D%2216%22/%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2250%22%20rx%3D%2242%22%20ry%3D%2216%22%20transform%3D%22rotate%2860%2050%2050%29%22/%3E%3Cellipse%20cx%3D%2250%22%20cy%3D%2250%22%20rx%3D%2242%22%20ry%3D%2216%22%20transform%3D%22rotate%28120%2050%2050%29%22/%3E%3C/g%3E%3Cg%20fill%3D%22%2345628a%22%3E%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%227%22/%3E%3Ccircle%20cx%3D%2290%22%20cy%3D%2245%22%20r%3D%224%22/%3E%3Ccircle%20cx%3D%2226%22%20cy%3D%2217%22%20r%3D%224%22/%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2282%22%20r%3D%224%22/%3E%3C/g%3E%3C/svg%3E">
+<style>:root{--bg:#f7f8fb;--paper:#fff;--ink:#182438;--muted:#56657b;--line:#e2e7ef;--accent:#5142c7;--accent2:#ebe8fc;--teal:#167369;--tealbg:#e7f4ef;--gold:#8a6220;--goldbg:#fff5df;--bad:#a52d42;--badbg:#fff0f2;--radius:20px;--shadow:0 9px 30px rgba(31,40,68,.045)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}button,input,select,textarea{font:inherit}button,a,input,select,textarea,summary{-webkit-tap-highlight-color:transparent}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.55}a{color:var(--accent);text-underline-offset:3px}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #9c8bf2;outline-offset:4px}h1,h2,h3,h4,p{margin-top:0}h1,h2,h3,h4{line-height:1.22;letter-spacing:-.035em}h1{font-size:clamp(31px,3.8vw,54px);font-weight:750;margin-bottom:20px}h2{font-size:28px;margin-bottom:18px}h3{font-size:21px;margin-bottom:12px}h4{font-size:18px}p{margin-bottom:17px}small,.small{font-size:13px;line-height:1.55}.muted{color:var(--muted)}.eyebrow{font-size:11px;letter-spacing:.15em;text-transform:uppercase;font-weight:750;color:var(--teal);margin-bottom:13px}.lead{font-size:18px;color:var(--muted);line-height:1.65;max-width:760px}.skip{position:fixed;top:-80px;left:20px;background:var(--ink);color:white;z-index:100;padding:12px}.skip:focus{top:12px}
+.sidebar{position:fixed;inset:0 auto 0 0;width:256px;background:var(--paper);border-right:1px solid var(--line);padding:29px 22px;display:flex;flex-direction:column;z-index:30;overflow:auto}.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);margin-bottom:34px}.brand-mark{display:grid;place-items:center;width:40px;height:40px;flex:0 0 40px;background:var(--accent);color:#fff;border-radius:12px;font-size:29px;line-height:1}.brand strong{font-size:14px;letter-spacing:.08em;display:block}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:.07em;text-transform:uppercase}.nav-label{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin:13px 12px 9px;font-weight:700}.nav-link{display:flex;align-items:center;gap:11px;text-decoration:none;color:var(--muted);padding:10px 11px;border-radius:10px;font-size:13px;font-weight:600;line-height:1.45;min-height:42px;margin:2px 0}.nav-link:hover{background:#f7f7fb;color:var(--ink)}.nav-link.active{color:var(--accent);background:var(--accent2)}.nav-index{width:22px;flex:0 0 22px;font-size:11px;opacity:.8;font-weight:700}.nav-check{margin-left:auto;color:var(--teal);font-weight:800}.sidebar-bottom{margin-top:auto;padding-top:25px}.progress-label{display:flex;justify-content:space-between;font-size:12px;font-weight:650;margin-bottom:8px}progress{width:100%;height:6px;border:0;border-radius:10px;overflow:hidden;background:var(--line)}progress::-webkit-progress-bar{background:var(--line)}progress::-webkit-progress-value{background:var(--teal)}progress::-moz-progress-bar{background:var(--teal)}.progress-hint{font-size:11px;line-height:1.5;color:var(--muted);margin:9px 0 0}.topbar{margin-left:256px;min-height:74px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:14px 48px;gap:16px;background:#ffffffa8}.topbar-left{font-size:12px;color:var(--muted);display:flex;gap:14px;align-items:center}.topbar-right{font-size:11px;font-weight:650;color:var(--teal);background:var(--tealbg);padding:5px 11px;border-radius:30px}.menu-btn{display:none;border:1px solid var(--line);background:white;border-radius:8px;padding:6px 12px}.main{margin-left:256px;padding:40px 48px 54px;max-width:1510px;min-height:calc(100vh - 74px)}.page{max-width:1080px;margin:0 auto;animation:appear .22s ease-out}.page.narrow{max-width:920px}.section-heading{display:flex;gap:20px;justify-content:space-between;align-items:baseline;margin:33px 0 18px}.section-heading h2{font-size:22px;margin:0}.section-heading span{font-size:12px;color:var(--muted)}.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);margin-bottom:22px}.card.soft{background:#f0f3fa;box-shadow:none}.card p:last-child{margin-bottom:0}.hero{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:center;background:white;border:1px solid var(--line);border-radius:24px;padding:40px;margin-bottom:22px;overflow:hidden;position:relative}.hero h1{max-width:570px}.hero .lead{font-size:16px}.hero-art{align-self:stretch;display:flex;flex-direction:column;justify-content:center;min-height:290px;background:radial-gradient(ellipse at center,#eeedf9 0,rgba(255,255,255,0) 70%);position:relative}.hero-art svg{width:100%;height:auto;display:block}.art-label{font-size:11px;letter-spacing:.1em;text-transform:uppercase;text-align:center;color:var(--muted);margin-top:8px}.pills{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.pill{background:#f0f2f7;color:var(--muted);font-size:11px;font-weight:650;padding:5px 10px;border-radius:30px}.pill.violet{background:var(--accent2);color:var(--accent)}.pill.green{background:var(--tealbg);color:var(--teal)}.actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:23px}.btn{border:1px solid transparent;border-radius:10px;padding:11px 18px;display:inline-flex;gap:10px;align-items:center;justify-content:center;background:var(--accent);color:#fff;font-size:13px;font-weight:650;line-height:1.5;text-decoration:none;min-height:43px}.btn:hover{filter:brightness(.96)}.btn.secondary{background:white;color:var(--ink);border-color:var(--line)}.btn.ghost{background:transparent;color:var(--accent);padding-left:0;padding-right:0}.btn.teal{background:var(--teal);color:#fff}.btn.danger{background:white;color:var(--bad);border-color:#edc5cb}.btn.compact{padding:8px 12px;min-height:36px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.module-card{padding:23px;position:relative;display:flex;flex-direction:column;min-height:242px}.module-card h3{font-size:19px;margin-top:18px}.module-card p{font-size:13px;color:var(--muted);line-height:1.65}.module-card .btn{margin-top:auto;justify-content:flex-start}.module-num{font-size:12px;font-weight:700;color:var(--accent)}.module-time{float:right;font-size:11px;color:var(--muted)}.outcomes{display:grid;grid-template-columns:1fr 1fr;gap:15px 25px}.outcome{font-size:14px;display:flex;gap:13px;line-height:1.6}.outcome b{color:var(--teal);font-size:13px}.notice,.callout{background:var(--accent2);border:1px solid #ded8fb;padding:20px 22px;border-radius:14px;margin:20px 0;font-size:14px}.callout.green,.notice.green{background:var(--tealbg);border-color:#c6e5dc}.callout.gold,.notice.gold{background:var(--goldbg);border-color:#eddfb9}.notice p:last-child,.callout p:last-child{margin-bottom:0}.source-note{font-size:12px;color:var(--muted);margin-top:18px}.source-note a{white-space:nowrap}.page-intro{margin-bottom:26px}.page-intro h1{font-size:36px;margin-bottom:15px}.lesson-text h2{font-size:24px;margin-top:32px}.lesson-text h2:first-child{margin-top:0}.lesson-text p{font-size:15px;line-height:1.8}.formula{border-left:3px solid var(--accent);background:#f6f5fe;padding:18px 22px;margin:20px 0;overflow-x:auto;font:21px/1.65 Georgia,"Times New Roman",serif;letter-spacing:.01em}.formula small{display:block;font:12px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--muted);margin-top:7px;letter-spacing:0}.antibar{text-decoration:overline;text-decoration-thickness:1px}.table-wrap{overflow-x:auto;margin:18px 0}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:13px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}th{background:#f5f6fa;font-weight:700}td strong{color:var(--ink)}.question{border:0;margin:0 0 26px;padding:0;min-width:0}.question legend{font-size:16px;font-weight:650;line-height:1.55;margin-bottom:13px;width:100%}.q-index{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em;display:block;margin-bottom:6px}.option{display:flex;align-items:flex-start;gap:11px;border:1px solid var(--line);background:white;border-radius:10px;padding:12px 14px;margin:8px 0;font-size:14px;cursor:pointer;line-height:1.6}.option:hover{background:#fafaff}.option:has(input:checked){border-color:#9588e6;background:#f4f1fe}.option input{margin:5px 0 0;accent-color:var(--accent);flex:0 0 auto}.option.is-correct{border-color:#80bcaa;background:#eef8f3}.option.is-wrong{border-color:#d89aa4;background:#fff2f4}.feedback{padding:14px 17px;border-radius:10px;background:var(--badbg);color:#813246;font-size:14px;margin-top:14px;border:1px solid #f1cbd2}.feedback.ok{background:var(--tealbg);border-color:#c5e4da;color:#155f52}.feedback.info{background:#f0f3fa;color:var(--ink);border-color:var(--line)}.feedback:empty{display:none}.feedback strong{display:block;margin-bottom:5px}.alert{border-left:3px solid var(--bad);background:var(--badbg);padding:12px 16px;font-size:14px;color:var(--bad);margin:15px 0}.alert:empty{display:none}.form-label{display:block;font-size:13px;font-weight:650;margin:0 0 7px}.field{margin-bottom:20px}input[type=text],input[type=number],input[type=url],select,textarea{width:100%;border:1px solid #c8d1df;border-radius:9px;background:#fff;color:var(--ink);padding:11px 13px;font-size:15px;min-height:44px}textarea{resize:vertical;min-height:110px}.input-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.input-unit{color:var(--muted);font-size:12px;margin-top:5px}.practical-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.status-tag{font-size:11px;font-weight:700;padding:5px 10px;background:#eef1f6;color:var(--muted);border-radius:30px;white-space:nowrap}.status-tag.done{background:var(--tealbg);color:var(--teal)}details{border-top:1px solid var(--line);padding-top:13px;margin-top:20px}summary{cursor:pointer;color:var(--accent);font-size:13px;font-weight:650}details p,details .details-body{padding-top:12px;font-size:14px}.lesson-end{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-top:26px;padding:25px;border:1px solid var(--line);border-radius:15px;background:white}.lesson-end p{margin:0;font-size:13px;max-width:540px}.footer{font-size:11px;color:var(--muted);display:flex;justify-content:space-between;gap:14px;border-top:1px solid var(--line);padding-top:22px;margin-top:35px;flex-wrap:wrap}.footer a{color:var(--muted)}.model-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:20px 0}.particle{border:1px solid #c9e3d9;border-radius:12px;background:#eff9f3;min-height:106px;text-align:left;padding:13px;position:relative;color:#1b6255}.particle.lepton{background:#f1eefa;border-color:#ddd5f3;color:#5f4398}.particle.boson{background:#fff4e7;border-color:#efddc6;color:#8b5d1f}.particle.scalar{background:#fcecf1;border-color:#ecd2dd;color:#8a3e64}.particle[aria-pressed=true]{outline:2px solid currentColor;outline-offset:2px}.particle-symbol{font-size:28px;display:block;line-height:1.2;margin-bottom:6px;font-weight:650}.particle-name{font-size:10px;display:block;font-weight:600}.particle-charge{font-size:10px;position:absolute;right:9px;top:9px}.particle-meta{font-size:9px;color:var(--muted);margin-top:6px;display:block}.model-head{font-size:10px;line-height:1.5;color:var(--muted);text-align:center;align-self:end}.model-legend{display:flex;flex-wrap:wrap;gap:12px;font-size:11px;color:var(--muted);margin-bottom:15px}.dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px;background:#65a189}.dot.purple{background:#9f87cf}.dot.orange{background:#d2a46f}.dot.pink{background:#ce8bab}.particle-detail{min-height:112px;padding:18px 20px;background:#f6f7fb;border-radius:12px;font-size:14px}.particle-detail h4{margin-bottom:8px}.particle-detail p{margin-bottom:0;font-size:14px}.sim-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:25px;align-items:center}.sim-controls label{font-size:13px;font-weight:650;display:block;margin-bottom:7px}.sim-controls input[type=range]{width:100%;accent-color:var(--accent);margin-bottom:17px}.sim-value{float:right;color:var(--accent)}.sim-picture{background:#f6f8fd;border:1px solid var(--line);border-radius:14px;overflow:hidden}.sim-picture svg{display:block;width:100%;height:auto}.sim-result{font-size:22px;font-weight:700;color:var(--accent);margin:13px 0 4px}.sim-caption{font-size:12px;color:var(--muted)}.result-panel{display:flex;align-items:center;gap:22px;margin:20px 0}.score-number{width:100px;height:100px;flex:0 0 100px;display:grid;place-items:center;border:7px solid #d9eee4;border-radius:50%;font-size:25px;font-weight:750;color:var(--teal)}.score-number.fail{border-color:#f2dce0;color:var(--bad)}.result-panel h3{margin-bottom:6px}.result-panel p{font-size:14px;margin:0}.checklist{list-style:none;padding:0;margin:18px 0}.checklist li{display:flex;gap:12px;font-size:14px;padding:10px 0;border-bottom:1px solid var(--line)}.check-icon{color:var(--teal);font-weight:800;flex:0 0 20px}.check-icon.pending{color:var(--muted)}.ref-row{margin-bottom:15px;border-bottom:1px solid var(--line);padding-bottom:15px;font-size:14px}.ref-row small{display:block;color:var(--muted);margin-top:5px}.toast{position:fixed;bottom:22px;left:calc(50% + 100px);transform:translateX(-50%);padding:13px 20px;border-radius:11px;background:#1d3443;color:white;font-size:13px;box-shadow:0 9px 30px #18243822;z-index:100;max-width:calc(100% - 30px)}.toast:empty{display:none}.storage-warning{margin:0 0 20px;padding:12px 15px;background:var(--goldbg);border:1px solid #eddfb9;font-size:13px;border-radius:10px}.hidden,[hidden]{display:none!important}code{font-family:ui-monospace,Consolas,monospace;font-size:.88em;background:#f0f1f7;padding:2px 5px;border-radius:4px}.certificate-paper{background:#fff;border:1px solid #cfd8e5;box-shadow:var(--shadow);padding:30px 38px;position:relative;overflow:hidden;color:#182438;aspect-ratio:297/210;display:flex;flex-direction:column;justify-content:space-between;gap:14px}.certificate-paper:before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:var(--accent)}.cert-top{display:flex;justify-content:space-between;align-items:center;gap:14px;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.cert-top .brand-mark{width:33px;height:33px;flex-basis:33px;font-size:24px}.cert-top-left{display:flex;align-items:center;gap:12px}.cert-core{text-align:center}.cert-eyebrow{font-size:11px;letter-spacing:.21em;color:var(--teal);text-transform:uppercase;margin-bottom:13px}.cert-core h2{font:normal clamp(25px,4vw,42px)/1.2 Georgia,serif;letter-spacing:.09em;margin:0 0 18px}.cert-core p{font-size:12px;color:var(--muted);margin:10px 0}.cert-name{font-size:clamp(18px,2.4vw,30px);font-weight:700;line-height:1.3;margin:13px 0;overflow-wrap:anywhere}.cert-title{font-size:18px;font-weight:650;line-height:1.5;max-width:620px;margin:0 auto}.cert-meta{display:flex;justify-content:center;gap:38px;margin-top:17px;font-size:11px;color:var(--muted)}.cert-meta strong{font-size:15px;color:var(--ink);display:block}.cert-bottom{display:flex;justify-content:space-between;gap:20px;font-size:10px;line-height:1.6;border-top:1px solid #dfe4ee;padding-top:16px}.cert-bottom b{display:block;font-size:12px;overflow-wrap:anywhere}.cert-disclaimer{font-size:9px;color:var(--muted);margin-top:5px;line-height:1.4}.cert-url{max-width:350px;overflow-wrap:anywhere}.print-area{display:none}.cert-preview-tag{position:absolute;top:53px;right:20px;transform:rotate(8deg);font-size:12px;color:#9f5c26;border:1px solid #deb785;padding:2px 8px;letter-spacing:.12em}.author-step{counter-increment:steps;position:relative;padding-left:43px;margin:19px 0;font-size:14px}.author-step:before{content:counter(steps,decimal-leading-zero);position:absolute;left:0;color:var(--accent);font-size:12px;font-weight:750}.steps{counter-reset:steps}.scroll-top{scroll-margin-top:25px}.zero-margin{margin:0}.completed-banner{background:var(--tealbg);color:var(--teal);padding:13px 16px;font-size:14px;border-radius:10px;margin:15px 0}.quiz-toolbar{display:flex;justify-content:space-between;gap:16px;align-items:center;margin-bottom:22px}.quiz-toolbar p{margin:0;font-size:13px;color:var(--muted)}.count-badge{background:var(--accent2);color:var(--accent);font-size:12px;padding:5px 10px;border-radius:8px}.report-preview{white-space:pre-wrap;font-size:13px;line-height:1.8;background:#f7f8fc;padding:20px;border-radius:12px;max-height:430px;overflow:auto}.fine{font-size:12px;color:var(--muted)}.home-note{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 25px;border-radius:14px;background:#eeedf9}.home-note p{margin:0;font-size:13px;max-width:650px}.inline-list{padding-left:22px;font-size:14px}.inline-list li{margin-bottom:7px}.icon-separator{color:#bcc4d2}.error-page{max-width:700px;padding:40px;margin:30px auto;background:white;border:1px solid #e4e6ec;border-radius:14px}
+@keyframes appear{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+@media(min-width:1600px){.main{margin-right:auto;margin-left:calc(256px + (100vw - 1600px)/2);max-width:1344px}}
+@media(max-width:1200px){.main{padding:30px}.topbar{padding:14px 30px}.hero{padding:30px;grid-template-columns:1.2fr .8fr}.hero h1{font-size:42px}.sidebar{width:230px;padding:26px 17px}.main,.topbar{margin-left:230px}.module-card{padding:21px}.card{padding:24px}}
+@media(max-width:980px){.sidebar{transform:translateX(-100%);width:256px;transition:transform .2s ease;box-shadow:12px 0 50px #18243812;top:69px}.sidebar.open{transform:translateX(0)}.sidebar .brand{display:none}.topbar{margin-left:0;min-height:69px;padding:12px 22px;position:sticky;top:0;z-index:40;background:#fff}.main{margin-left:0;padding:30px}.menu-btn{display:inline-flex}.topbar-right{font-size:10px}.toast{left:50%}.hero h1{font-size:47px}.page-intro h1{font-size:32px}}
+@media(max-width:680px){body{font-size:15px}.main{padding:25px 17px 35px}.topbar{padding:11px 17px}.topbar-label{font-size:11px}.topbar-right{display:none}.hero{grid-template-columns:1fr;padding:25px;gap:6px}.hero h1{font-size:38px}.hero .lead{font-size:15px}.hero-art{min-height:0;max-height:220px}.hero-art svg{height:195px}.art-label{margin-top:0}.hero .actions{margin-top:17px}.pills{margin:14px 0}.grid3,.grid2,.outcomes,.sim-grid{grid-template-columns:1fr}.module-card{min-height:0;margin-bottom:0}.grid3{margin-bottom:23px}.module-card h3{margin-top:14px}.card{padding:21px;border-radius:16px}.section-heading{margin-top:27px}.section-heading h2{font-size:21px}.section-heading span{font-size:10px}.input-row{grid-template-columns:1fr}.input-row .field{margin-bottom:10px}.page-intro h1{font-size:31px}.lesson-end{flex-direction:column;align-items:stretch;padding:20px}.model-grid{gap:6px;grid-template-columns:repeat(5,minmax(0,1fr))}.particle{padding:10px 6px;min-height:87px;border-radius:9px}.particle-symbol{font-size:21px}.particle-name{font-size:8px}.particle-meta{font-size:8px}.particle-charge{font-size:8px;right:4px;top:4px}.model-head{font-size:8px}.sim-result{font-size:20px}.result-panel{gap:15px}.score-number{width:80px;height:80px;flex-basis:80px;font-size:21px}.home-note{flex-direction:column;align-items:flex-start}.certificate-paper{padding:22px 20px;aspect-ratio:auto;min-height:410px;gap:18px}.cert-top{font-size:8px;letter-spacing:.07em}.cert-top .brand-mark{display:none}.cert-core h2{font-size:26px;letter-spacing:.05em}.cert-name{font-size:22px}.cert-title{font-size:14px}.cert-core p{font-size:11px}.cert-meta{gap:18px;font-size:9px}.cert-meta strong{font-size:12px}.cert-bottom{flex-direction:column;gap:10px;font-size:9px}.cert-bottom b{font-size:11px}.cert-eyebrow{font-size:9px}.cert-url{max-width:100%}.cert-preview-tag{top:41px;right:15px;font-size:9px}.formula{font-size:18px;padding:15px}th,td{padding:10px;font-size:12px}.quiz-toolbar{align-items:flex-start}.practical-heading{align-items:flex-start}.status-tag{font-size:10px}.btn{padding:10px 14px}.footer{font-size:10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.page{animation:none}.sidebar{transition:none}}
+@media print{@page{size:A4 landscape;margin:0}body.printing-certificate{background:white}.printing-certificate>*:not(.print-area){display:none!important}.printing-certificate .print-area{display:block!important;width:297mm;height:210mm;overflow:hidden}.printing-certificate .certificate-paper{display:flex!important;box-shadow:none;border:0;width:297mm;height:210mm;min-height:0;aspect-ratio:auto;padding:19mm 22mm 15mm;gap:8mm;-webkit-print-color-adjust:exact;print-color-adjust:exact}.printing-certificate .certificate-paper:before{width:4mm}.printing-certificate .cert-top{font-size:10pt}.printing-certificate .cert-core h2{font-size:35pt;margin-bottom:8mm}.printing-certificate .cert-eyebrow{font-size:10pt}.printing-certificate .cert-name{font-size:27pt;line-height:1.25;margin:5mm 0;max-width:244mm}.printing-certificate .cert-title{font-size:18pt;max-width:230mm}.printing-certificate .cert-core p{font-size:11pt;margin:3mm 0}.printing-certificate .cert-meta{font-size:10pt;gap:20mm;margin-top:6mm}.printing-certificate .cert-meta strong{font-size:14pt}.printing-certificate .cert-bottom{display:flex;flex-direction:row;gap:12mm;font-size:9pt;padding-top:5mm}.printing-certificate .cert-bottom b{font-size:11pt}.printing-certificate .cert-disclaimer{font-size:8pt}.printing-certificate .cert-url{max-width:120mm}.printing-certificate .cert-top .brand-mark{display:grid;width:11mm;height:11mm;flex-basis:11mm}.printing-certificate .cert-preview-tag{top:38mm;right:20mm;font-size:12pt}body:not(.printing-certificate) .sidebar,body:not(.printing-certificate) .topbar,body:not(.printing-certificate) .btn{display:none}body:not(.printing-certificate) .main{margin:0;padding:15mm}}
+/* The persistence warning must remain readable beside the fixed navigation. */
+.storage-warning{margin:16px 48px 0 304px}
+@media(max-width:1200px){.storage-warning{margin:16px 30px 0 260px}}
+@media(max-width:980px){.storage-warning{margin:16px 30px 0}}
+@media(max-width:680px){.storage-warning{margin:14px 17px 0}}
+.main:focus{outline:none}
+
+code{overflow-wrap:anywhere;word-break:break-word}
+
+/* Версия 0.2: спокойное оформление, схемы и фирменный атом. */
+:root{--accent:#45628a;--accent2:#edf2f8;--teal:#3d7165;--radius:14px;--shadow:none}
+body{background:#f7f8fa}h1,h2,h3{letter-spacing:-.025em}.card,.hero{box-shadow:none}.hero{border-radius:16px;grid-template-columns:1.45fr .65fr;padding:32px}.hero h1{font-size:clamp(31px,3.3vw,47px)}.hero-art{background:none;min-height:220px}.hero-art svg{max-width:220px;margin:auto;color:var(--accent)}.hero-art .art-label{font-size:10px;letter-spacing:.03em;max-width:220px;margin:12px auto 0;text-transform:none}
+.brand{gap:9px}.brand strong{font-size:12.7px;letter-spacing:0;white-space:nowrap}.brand small{font-size:9px;letter-spacing:.04em}.brand-mark{background:#edf2f8;color:#45628a;border-radius:10px;width:36px;height:36px;flex-basis:36px}.brand-mark svg{width:31px;height:31px;display:block}.topbar-right{text-decoration:none;background:transparent;color:var(--accent);font-weight:700;white-space:nowrap;padding:0;font-size:12px}.module-card{min-height:220px}.module-card h3{font-size:19px}.pill{border-radius:7px}.eyebrow{letter-spacing:.1em}.callout,.notice{background:#f1f4f8;border-color:#dce3ed;border-radius:10px}.formula{background:#f4f6fa}.card.soft{background:#f7f8fa}
+.home-concepts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.home-concepts a{color:inherit;text-decoration:none;border-left:2px solid #dce3ed;padding-left:14px;font-size:13px;line-height:1.6}.home-concepts strong{display:block;margin-bottom:4px;font-size:15px}.home-concepts span{color:var(--muted)}
+.definition-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:20px 0}.definition-grid section,.compare-installations section{padding:20px;border:1px solid var(--line);border-radius:10px;background:#fafbfd}.definition-grid h3{font-size:19px}.definition-grid p{font-size:14px;line-height:1.7}.definition-grid p:last-child{margin-bottom:0}.learning-tree{margin:26px 0;padding:22px;background:#f7f9fc;border:1px solid var(--line);border-radius:12px}.learning-tree figcaption{font-weight:700;font-size:17px;margin-bottom:20px}.tree-root{max-width:440px;text-align:center;border:1px solid #afbdcf;border-radius:8px;background:white;padding:12px 16px;margin:auto;font-size:14px;font-weight:700;position:relative}.tree-root:after{content:'';position:absolute;left:50%;top:100%;height:20px;border-left:1px solid #afbdcf}.tree-branches{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:38px;position:relative}.tree-branches:before{content:'';position:absolute;top:-19px;left:25%;right:25%;height:1px;background:#afbdcf}.tree-branch{min-width:0;position:relative}.tree-branch:before{content:'';position:absolute;height:19px;left:50%;top:-19px;border-left:1px solid #afbdcf}.tree-branch>h3{font-size:16px;text-align:center;background:#eaf0f7;padding:12px 9px;border-radius:7px;margin:0 0 10px}.tree-branch>p{font-size:12px;color:var(--muted);line-height:1.6;margin:10px 0}.tree-node{border-left:2px solid #bdcadb;padding:9px 10px;margin:10px 0;background:white;font-size:13px;line-height:1.6}.tree-node strong,.tree-node span,.tree-node small{display:block}.tree-node span,.tree-node small{color:var(--muted)}.tree-sub{margin:10px 0 0 8px;padding-left:10px;border-left:1px solid #bac8d9}.tree-sub b{display:block;font-size:12px;font-weight:500;margin:7px 0}.tree-note{font-size:12px!important;line-height:1.6!important;color:var(--muted);margin:18px 0 0!important}.plain-flow{display:flex;gap:8px;align-items:center;justify-content:flex-start;flex-wrap:wrap;background:#f6f8fb;padding:16px;border:1px solid var(--line);border-radius:10px;margin:20px 0}.plain-flow span{font-size:13px;line-height:1.5;background:white;border:1px solid var(--line);padding:8px 10px;border-radius:7px;flex:1 1 100px}.plain-flow>b{color:#6e829e}.science-photo{margin:18px 0 24px}.photo-frame{border-radius:12px;overflow:hidden;background:#eef2f7;border:1px solid var(--line);min-height:100px}.science-photo img{width:100%;max-height:440px;object-fit:contain;display:block}.science-photo img[hidden]{display:none}.science-photo figcaption{font-size:12px;color:var(--muted);line-height:1.6;margin-top:9px}.photo-fallback{display:none;padding:28px;color:var(--muted);font-size:13px}.photo-fallback strong,.photo-fallback span{display:block}.photo-fallback span{margin-top:8px}.unavailable .photo-fallback{display:block}.compare-installations{margin:20px 0}.compare-installations p{font-size:14px}.experiment-case{margin:20px 0}.experiment-case label{font-size:14px;line-height:1.6}.experiment-case select{max-width:100%}
+.certificate-paper{border:1px solid #d9e1ec;padding:32px 38px;gap:19px;aspect-ratio:1.414;position:relative;background:#fff;box-shadow:none}.certificate-paper:before{display:none}.cert-top{font-size:10px;letter-spacing:.015em}.cert-top-left{gap:10px}.cert-core h2{font-family:Georgia,serif;letter-spacing:.08em;color:#304d73;font-size:37px;margin:10px 0 15px}.cert-eyebrow{font-size:10px;color:#5e718b;letter-spacing:.1em}.cert-core p{font-size:12px;margin:8px 0}.cert-name{font-size:29px;margin:12px auto;max-width:100%;overflow-wrap:anywhere}.cert-title{font-size:18px;max-width:640px}.cert-meta{margin-top:19px;gap:32px}.cert-meta strong{font-size:15px}.cert-bottom{display:grid;grid-template-columns:minmax(0,1fr) 136px minmax(0,1fr);align-items:center;border-top:1px solid #dce3ed;padding-top:12px;gap:16px;font-size:10px}.cert-bottom b{font-size:12px}.cert-bottom>div{min-width:0;overflow-wrap:anywhere}.cert-bottom .cert-id{text-align:right}.cert-bottom .cert-url{max-width:100%;font-size:9px}.cert-stamp{display:block;width:136px;height:136px;justify-self:center;transform:rotate(-9deg);color:#45628a}.cert-disclaimer{font-size:9px;text-align:center;border-top:0;margin-top:8px;line-height:1.5;color:#68778b}.cert-preview-tag{top:65px;right:25px;font-size:10px}.cert-meta div{min-width:0}.print-area .cert-stamp{color:#45628a}
+@media(max-width:1200px){.hero{padding:27px;grid-template-columns:1.4fr .6fr}.hero-art svg{max-width:180px}.home-concepts{grid-template-columns:1fr 1fr}.topbar{gap:10px}.topbar-label{font-size:10px}}
+@media(max-width:680px){.hero{grid-template-columns:1fr;padding:23px}.hero-art{display:none}.topbar{padding:13px 17px;flex-wrap:wrap}.topbar-label{display:none}.topbar-right{font-size:12px}.home-concepts,.definition-grid{grid-template-columns:1fr}.home-concepts{gap:16px}.learning-tree{padding:16px}.tree-branches{grid-template-columns:1fr;gap:18px;margin-top:28px}.tree-branches:before{display:none}.tree-root:after{height:27px}.tree-branch:before{display:none}.tree-branch>h3{text-align:left}.tree-root{font-size:13px}.learning-tree figcaption{font-size:16px}.plain-flow{padding:12px}.plain-flow span{flex-basis:100%;font-size:12px}.plain-flow>b{transform:rotate(90deg);margin-left:8px}.certificate-paper{padding:25px 18px;aspect-ratio:auto}.cert-top{font-size:8px;gap:10px}.cert-top-left{max-width:65%;overflow-wrap:anywhere}.cert-core h2{font-size:28px}.cert-name{font-size:23px}.cert-title{font-size:15px}.cert-meta{gap:14px;font-size:9px;flex-wrap:wrap}.cert-meta strong{font-size:12px}.cert-bottom{grid-template-columns:1fr 105px;gap:10px;display:grid}.cert-bottom .cert-id{grid-column:1 / -1;text-align:left}.cert-stamp{width:105px;height:105px}.cert-disclaimer{font-size:9px}.cert-preview-tag{top:50px;right:18px}}
+@media print{.printing-certificate .certificate-paper{padding:12mm 18mm 10mm;gap:4mm;justify-content:space-between}.printing-certificate .cert-core h2{font-size:33pt;margin:3mm 0 4mm}.printing-certificate .cert-name{font-size:26pt;margin:3mm 0;max-width:260mm}.printing-certificate .cert-title{font-size:16pt;max-width:255mm}.printing-certificate .cert-core p{font-size:10pt;margin:2mm 0}.printing-certificate .cert-meta{gap:18mm;margin-top:5mm}.printing-certificate .cert-bottom{display:grid;grid-template-columns:minmax(0,1fr) 36mm minmax(0,1fr);align-items:center;padding-top:3mm;gap:6mm;font-size:8pt}.printing-certificate .cert-stamp{width:36mm;height:36mm}.printing-certificate .cert-id{grid-column:auto;text-align:right}.printing-certificate .cert-bottom b{font-size:10pt}.printing-certificate .cert-disclaimer{font-size:8pt}.printing-certificate .cert-top{font-size:9pt}.printing-certificate .cert-url{max-width:90mm}.printing-certificate .cert-preview-tag{top:32mm;right:18mm}}
+
+@media(max-width:900px){.topbar-right{display:block!important;font-size:12px;white-space:nowrap}}
+
+/* 0.3: inline educational diagrams, nuclear notation and readable mobile forms. */
+[hidden]{display:none!important}.examples{border-top:1px solid var(--line);padding-top:12px;margin-top:16px!important}.definition-grid section{min-width:0}.definition-grid .examples{font-size:13px}.structure-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:23px 0}.structure-step{position:relative;display:flex;flex-direction:column;margin:0;background:#f8faff;border:1px solid var(--line);border-radius:12px;padding:12px 10px}.structure-step figcaption{font-size:13px;line-height:1.4;min-height:40px;font-weight:650}.structure-step svg{display:block;width:100%;height:auto;margin-top:auto}.structure-step:not(:last-child)::after{content:'→';position:absolute;right:-13px;top:42%;color:#647c9d;font-size:16px;z-index:1}.matter-tree{margin:26px 0;background:#f7f9fc;border:1px solid var(--line);border-radius:16px;padding:24px 20px}.matter-tree figcaption{font-weight:700;font-size:18px;margin-bottom:20px;text-align:center}.matter-root,.matter-box{background:white;border:1px solid #c9d6e6;border-radius:9px;padding:12px 10px;text-align:center;font-size:14px;line-height:1.4}.matter-root{max-width:250px;margin:auto;color:#345578;font-weight:700}.down-link{text-align:center;color:#6a819e;line-height:1.2;height:30px;font-size:23px}.matter-split{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding-top:28px;position:relative}.matter-split:before{content:'';position:absolute;top:0;left:50%;height:14px;border-left:1.5px solid #95a9c3}.matter-branch{position:relative}.matter-branch:before{content:'';position:absolute;top:-14px;height:14px;width:calc(50% + 15px);border-top:1.5px solid #95a9c3}.matter-branch:first-child:before{left:50%;border-left:1.5px solid #95a9c3}.matter-branch:last-child:before{right:50%;border-right:1.5px solid #95a9c3}.matter-box small{display:block;font-size:11px;color:var(--muted);margin-top:5px}.matter-pair{display:grid;grid-template-columns:1fr 1fr;gap:10px}.matter-tree .tree-note{margin-top:22px!important;font-size:12px}.quark-table caption{font-size:12px;text-align:left;color:var(--muted);margin-bottom:10px}.color-demo{display:flex;gap:12px;align-items:center;flex-wrap:wrap;background:#f7f9fc;padding:20px;border-radius:12px;margin:20px 0}.color-token{text-align:center;width:86px;padding:10px 5px;border-radius:12px;border:1px solid currentColor;font:bold 24px/1.5 Georgia,serif}.color-token small{display:block;font:11px/1.6 Arial,sans-serif}.color-demo p{flex:1 1 190px;font-size:13px;margin:0}.red{color:#a34150;background:#fff0f2}.green{color:#226d57;background:#eaf6ee}.blue{color:#3f65a0;background:#edf3ff}.color-combinations{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:20px 0}.color-combinations section{background:#f8faff;border:1px solid var(--line);border-radius:12px;padding:18px;min-width:0}.color-combinations h3{font-size:18px}.color-combinations p{font-size:13px;margin-top:12px}.color-equation{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px}.color-chip{display:inline-grid;place-items:center;width:32px;height:32px;border:1px solid currentColor;border-radius:50%;font-weight:700}.color-chip.anti{color:#a34150;background:#fff;outline:2px dotted #deb1ba;outline-offset:-5px}.nuclide{display:inline-flex;align-items:center;vertical-align:middle;white-space:nowrap;font-family:Georgia,'Times New Roman',serif;line-height:1.1;margin:0 .08em}.nu-indices{display:flex;flex-direction:column;align-items:flex-end;font-size:.62em;line-height:1.12;gap:.06em;margin-right:.13em;min-width:.65em}.nu-symbol{font-size:1em;line-height:1.1}.nu-symbol sub{font-size:.6em;vertical-align:-.25em}.nuclear-equation{line-height:2;overflow-x:auto}.notation-key{display:flex;align-items:center;gap:26px;padding:18px 22px;border:1px solid var(--line);border-radius:12px;background:#f9fbfe}.notation-key>div{font-size:35px}.notation-key p{margin:0;font-size:14px}.beta-section{border-top:1px solid var(--line);padding-top:24px;margin-top:24px}.beta-section h3{font-size:20px}.given{margin-top:12px;padding:14px 16px;background:#f1f5fa;border-radius:10px}.given p{margin:0}.locked-solution{font-size:12px;color:var(--muted);padding-top:15px;border-top:1px solid var(--line);margin-top:18px!important}.solution-area details{margin-top:18px}.solution-area .details-body{font-size:14px}.decay-inputs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:20px 0}.decay-inputs section{padding:16px;background:#f8faff;border:1px solid var(--line);border-radius:12px;min-width:0}.decay-inputs h3{font-size:17px}.decay-inputs input{max-width:100%}.checkpoint-hint{font-size:13px;color:var(--muted);margin-bottom:20px}.checkpoint-summary .feedback{margin-top:10px}.about-facts{display:grid;grid-template-columns:160px 1fr;gap:10px 18px;margin:22px 0}.about-facts dt{font-weight:650;font-size:14px}.about-facts dd{margin:0;font-size:14px}.migration-note{font-size:13px}.report-note{font-size:12px;color:var(--muted);margin:15px 0 0}.lesson-text [id]{scroll-margin-top:20px}
+@media(max-width:680px){.structure-cards{grid-template-columns:1fr 1fr;gap:14px}.structure-step:nth-child(2)::after{display:none}.structure-step figcaption{font-size:12px;min-height:34px}.matter-tree{padding:18px 12px}.matter-tree figcaption{font-size:16px}.matter-root,.matter-box{font-size:12px;padding:10px 6px}.matter-box small{font-size:10px}.matter-split{gap:16px}.matter-branch:before{width:calc(50% + 8px)}.matter-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}.matter-pair .matter-box{font-size:11px;padding:10px 2px}.color-combinations,.decay-inputs{grid-template-columns:1fr}.color-demo{padding:14px;gap:8px}.color-token{width:70px}.notation-key{gap:15px;padding:15px}.notation-key p{font-size:13px}.nuclear-equation{font-size:18px;padding:16px 12px}.about-facts{grid-template-columns:1fr;gap:5px}.about-facts dd{margin-bottom:12px}.color-combinations p{font-size:13px}.quark-table th,.quark-table td{font-size:11px;padding:9px 7px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
+/* 0.3.1: distinguish classification links from internal structure. */
+.matter-relation{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;min-height:40px;padding:4px 3px;color:#566b86;font-size:11px;line-height:1.25;text-align:center}
+.matter-relation [aria-hidden="true"]{font-size:19px;line-height:1}
+.matter-split{grid-template-columns:repeat(2,minmax(0,1fr))}
+.matter-branch{min-width:0}
+@media(max-width:680px){.matter-relation{font-size:10px;min-height:37px}.matter-structure-link{min-height:43px}}
+
+/* Classification tree: nested groups preserve their relationships on narrow screens. */
+.particle-classification{margin:26px 0;padding:24px 20px;background:#f7f9fc;border:1px solid var(--line);border-radius:16px;min-width:0}
+.particle-classification>figcaption{text-align:center;font-size:19px;font-weight:750;margin:0 0 22px;line-height:1.4}
+.particle-classification .pc-root{position:relative;max-width:390px;margin:0 auto;padding:12px 16px;background:#fff;border:1px solid #b8c8df;border-radius:10px;text-align:center;font-size:16px;font-weight:700;line-height:1.5}
+.particle-classification small{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:4px;line-height:1.5}
+.pc-top-branches{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1.12fr);gap:20px;padding-top:30px;position:relative}
+.pc-top-branches:before{content:'';position:absolute;top:0;left:50%;height:15px;border-left:1px solid #a7b9d2}
+.pc-top-branches:after{content:'';position:absolute;top:15px;left:calc(32.05% - 4px);right:calc(17.95% - 7px);border-top:1px solid #a7b9d2}
+.pc-top-branches>section{min-width:0;position:relative}
+.pc-top-branches>section:before{content:'';position:absolute;top:-15px;left:50%;height:15px;border-left:1px solid #a7b9d2}
+.particle-classification .pc-heading{font-size:16px;text-align:center;border:1px solid #b8c8df;border-radius:10px;background:#edf2f8;padding:11px 8px;margin:0;line-height:1.4}
+.pc-pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;min-width:0}
+.pc-subbranches{position:relative;margin-top:24px}
+.pc-subbranches:before{content:'';position:absolute;top:-12px;left:25%;right:25%;border-top:1px solid #a7b9d2}
+.pc-subbranches:after{content:'';position:absolute;top:-24px;left:50%;height:12px;border-left:1px solid #a7b9d2}
+.pc-subbranches>section{position:relative}
+.pc-subbranches>section:before{content:'';position:absolute;top:-12px;left:50%;height:12px;border-left:1px solid #a7b9d2}
+.pc-family{min-width:0;background:#fff;border:1px solid #d3ddea;border-radius:10px;overflow-wrap:break-word}
+.particle-classification .pc-family h4{font:700 14px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;margin:0;padding:12px 10px;text-align:center;border-bottom:1px solid #e3e9f1;background:#f1f5fa;border-radius:10px 10px 0 0}
+.pc-generation{padding:10px 12px;font-size:13px;line-height:1.55}
+.pc-generation+.pc-generation{border-top:1px solid #edf0f5}
+.pc-generation b{display:block;font-size:11px;color:var(--muted);font-weight:600;margin-bottom:5px}
+.pc-generation span{display:block;margin:2px 0}
+.pc-boson-types{margin-top:24px;display:grid;gap:12px;padding-left:12px;border-left:1px solid #a7b9d2;position:relative}
+.pc-boson-types>.pc-family{position:relative}
+.pc-boson-types>.pc-family:before{content:'';position:absolute;left:-13px;top:23px;width:12px;border-top:1px solid #a7b9d2}
+.pc-boson-item{padding:10px 12px;line-height:1.5;font-size:13px}
+.pc-boson-item+.pc-boson-item{border-top:1px solid #edf0f5}
+.pc-boson-item b,.pc-boson-item span{display:block}
+.pc-boson-item span{font-size:12px;color:var(--muted);margin-top:3px}
+.particle-classification .pc-higgs h4{border-bottom:0;border-radius:10px}
+.pc-composition{display:flex;flex-direction:column;align-items:center;text-align:center;gap:4px;border-top:1px solid #dce4ee;margin:24px 0 8px;padding-top:18px;color:var(--muted);font-size:12px;line-height:1.5}
+.pc-composition span:last-child{font-size:21px;line-height:1}
+.pc-hadron-branches{position:relative;padding-top:24px}
+.pc-hadron-branches:before{content:'';position:absolute;top:12px;left:25%;right:25%;border-top:1px solid #a7b9d2}
+.pc-hadron-branches:after{content:'';position:absolute;top:0;left:50%;height:12px;border-left:1px solid #a7b9d2}
+.pc-hadron-branches>.pc-family{position:relative}
+.pc-hadron-branches>.pc-family:before{content:'';position:absolute;top:-12px;left:50%;height:12px;border-left:1px solid #a7b9d2}
+.pc-subgroup-label{font-size:11px;text-align:center;color:var(--muted);margin:12px 0 8px}
+.pc-baryon-types{padding:0 10px 12px;gap:10px;align-items:start}
+.pc-example{padding:10px 6px;border:1px solid #dce4ee;border-radius:8px;font-size:13px;text-align:center;line-height:1.5;min-width:0}
+.pc-nucleons{margin:7px 0 0;padding:7px 0 0;border-top:1px solid #e3e9f1;font-size:12px;line-height:1.6}
+.pc-nucleons span{display:block}
+.pc-meson-example{padding:20px 12px;font-size:13px;text-align:center;color:var(--muted)}
+@media(max-width:700px){.particle-classification{padding:20px 12px}.pc-top-branches{grid-template-columns:1fr;gap:20px;padding-top:20px}.pc-top-branches:before,.pc-top-branches:after,.pc-top-branches>section:before{display:none}.pc-hadron-branches{grid-template-columns:1fr;padding-top:16px}.pc-hadron-branches:before,.pc-hadron-branches:after,.pc-hadron-branches>.pc-family:before{display:none}.pc-boson-types{margin-top:12px}.pc-composition{margin-top:20px}.particle-classification>figcaption{font-size:18px}.pc-baryon-types{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:450px){.particle-classification{padding:18px 10px}.pc-subbranches{grid-template-columns:1fr;margin-top:12px;gap:12px}.pc-subbranches:before,.pc-subbranches:after,.pc-subbranches>section:before{display:none}.pc-generation{font-size:13px}.pc-generation span{margin:3px 0}.pc-top-branches{gap:18px}.pc-family h4{overflow-wrap:anywhere}}
+
+</style>
+<script type="application/json" id="course-config">{
+  "courseId": "lab8-hep-intro-2026",
+  "version": "0.3.4",
+  "title": "Физика элементарных частиц: частицы, взаимодействия и эксперименты",
+  "author": "Aminochka-Physicist",
+  "organization": "",
+  "courseUrl": "",
+  "passScore": 9
+}</script>
+</head>
+<body>
+<a class="skip" href="#main">Перейти к содержанию</a>
+<aside class="sidebar" id="sidebar" aria-label="Навигация по курсу">
+ <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><g stroke="currentColor" stroke-width="3"><ellipse cx="50" cy="50" rx="42" ry="16"/><ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(120 50 50)"/></g><g fill="currentColor"><circle cx="50" cy="50" r="7"/><circle cx="90" cy="45" r="4"/><circle cx="26" cy="17" r="4"/><circle cx="27" cy="82" r="4"/></g></svg></span><span><strong>Aminochka-Physicist</strong><small>Авторский мини-курс</small></span></a>
+ <nav id="side-nav" aria-label="Разделы курса"></nav>
+ <div class="sidebar-bottom"><div class="progress-label"><span>Твой прогресс</span><span id="overall-percent">0%</span></div><progress id="overall-bar" value="0" max="100" aria-label="Прогресс прохождения курса"></progress><p class="progress-hint"><span id="progress-count">0 из 11 шагов</span><br>Сохраняется только в этом браузере</p></div>
+</aside>
+<header class="topbar"><div class="topbar-left"><button class="menu-btn" id="menu-toggle" type="button" aria-controls="sidebar" aria-expanded="false" aria-label="Открыть меню курса">☰ Меню</button><span class="topbar-label">УЧЕБНЫЙ МИНИ-КУРС <span class="icon-separator"> / </span> ЛАБОРАТОРНАЯ № 8</span></div><a class="topbar-right" href="#home">Aminochka-Physicist</a></header>
+<div id="storage-warning" class="storage-warning" hidden>Браузер не разрешает локальное сохранение. Сайт работает, но после перезагрузки прогресс может потеряться. Сохрани отчёт и сертификат до закрытия страницы.</div>
+<main class="main" id="main" tabindex="-1"></main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><div class="error-page"><h1>Нужен JavaScript</h1><p>Включи JavaScript в настройках браузера, чтобы открыть учебные модули, тесты и сертификат. Установка программ и регистрация на сайте не нужны.</p></div></noscript>
+<script>'use strict';
+const ATOM_SVG = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\" fill=\"none\"><g stroke=\"currentColor\" stroke-width=\"3\"><ellipse cx=\"50\" cy=\"50\" rx=\"42\" ry=\"16\"/><ellipse cx=\"50\" cy=\"50\" rx=\"42\" ry=\"16\" transform=\"rotate(60 50 50)\"/><ellipse cx=\"50\" cy=\"50\" rx=\"42\" ry=\"16\" transform=\"rotate(120 50 50)\"/></g><g fill=\"currentColor\"><circle cx=\"50\" cy=\"50\" r=\"7\"/><circle cx=\"90\" cy=\"45\" r=\"4\"/><circle cx=\"26\" cy=\"17\" r=\"4\"/><circle cx=\"27\" cy=\"82\" r=\"4\"/></g></svg>";
+const SEAL_SVG = "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 220 220\" role=\"img\" aria-label=\"Шуточная печать Aminochka-Physicist с атомом\" style=\"color:#45628a\"><defs><path id=\"sealTop\" d=\"M 28,110 a 82,82 0 0,1 164,0\"/><path id=\"sealBottom\" d=\"M 28,110 a 82,82 0 0,0 164,0\"/></defs><g fill=\"none\" stroke=\"currentColor\"><circle cx=\"110\" cy=\"110\" r=\"102\" stroke-width=\"2.5\"/><circle cx=\"110\" cy=\"110\" r=\"96\" stroke-width=\"1\"/><circle cx=\"110\" cy=\"110\" r=\"67\" stroke-width=\"1.8\"/></g><g font-family=\"Arial,sans-serif\" font-weight=\"700\" fill=\"currentColor\"><text font-size=\"17\" letter-spacing=\"1.1\"><textPath href=\"#sealTop\" startOffset=\"50%\" text-anchor=\"middle\">Aminochka-Physicist</textPath></text><text font-size=\"11.5\" letter-spacing=\"1.5\"><textPath href=\"#sealBottom\" startOffset=\"50%\" text-anchor=\"middle\">ПРОВЕРЕНО АТОМОМ</textPath></text></g><g transform=\"translate(60 60)\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\"><ellipse cx=\"50\" cy=\"50\" rx=\"42\" ry=\"16\"/><ellipse cx=\"50\" cy=\"50\" rx=\"42\" ry=\"16\" transform=\"rotate(60 50 50)\"/><ellipse cx=\"50\" cy=\"50\" rx=\"42\" ry=\"16\" transform=\"rotate(120 50 50)\"/></g><g fill=\"currentColor\"><circle cx=\"50\" cy=\"50\" r=\"7\"/><circle cx=\"90\" cy=\"45\" r=\"4\"/><circle cx=\"26\" cy=\"17\" r=\"4\"/><circle cx=\"27\" cy=\"82\" r=\"4\"/></g></g><g fill=\"currentColor\"><circle cx=\"17\" cy=\"112\" r=\"3\"/><circle cx=\"203\" cy=\"112\" r=\"3\"/></g></svg>";
+const CONFIG = JSON.parse(document.getElementById('course-config').textContent);
+// Ссылки на источники учебного текста и фотографий.
+const SOURCES = [
+  {
+    "id": 1,
+    "title": "CERN — The Standard Model",
+    "url": "https://home.cern/science/physics/standard-model",
+    "note": "Классификация фундаментальных частиц и переносчики взаимодействий."
+  },
+  {
+    "id": 2,
+    "title": "OpenStax — Quarks",
+    "url": "https://openstax.org/books/university-physics-volume-3/pages/11-3-quarks",
+    "note": "Кварковый состав адронов; заряды, спин и барионное число кварков."
+  },
+  {
+    "id": 3,
+    "title": "CERN — Antimatter",
+    "url": "https://home.cern/science/physics/antimatter",
+    "note": "Частицы и античастицы. Аннигиляция и сохранение энергии."
+  },
+  {
+    "id": 4,
+    "title": "OpenStax — Particle Conservation Laws",
+    "url": "https://openstax.org/books/university-physics-volume-3/pages/11-2-particle-conservation-laws",
+    "note": "Проверка реакций по законам сохранения. Примеры с лептонами и барионами."
+  },
+  {
+    "id": 5,
+    "title": "CERN — The Higgs boson",
+    "url": "https://home.cern/science/physics/higgs-boson",
+    "note": "Поле Хиггса; поиск нестабильной частицы по продуктам распада."
+  },
+  {
+    "id": 6,
+    "title": "Fermilab — Solar neutrinos",
+    "url": "https://neutrinos.fnal.gov/sources/solar-neutrinos/",
+    "note": "Осцилляции нейтрино и необходимость ненулевых масс."
+  },
+  {
+    "id": 8,
+    "title": "CMS — Detector",
+    "url": "https://cms.cern/detector",
+    "note": "Трекер, электромагнитный и адронный калориметры, мюонная система."
+  },
+  {
+    "id": 10,
+    "title": "CMS — A fractal tree of quarks and gluons",
+    "url": "https://cms.cern/index.php/news/fractal-tree-quarks-and-gluons",
+    "note": "Кварки, глюоны и квантовая хромодинамика."
+  },
+  {
+    "id": 11,
+    "title": "DOE — The Higgs Boson",
+    "url": "https://www.energy.gov/science/doe-explainsthe-higgs-boson",
+    "note": "Роль взаимодействия с полем Хиггса; отличие поля от его квантового возбуждения."
+  },
+  {
+    "id": 12,
+    "title": "OpenStax — Introduction to Particle Physics",
+    "url": "https://openstax.org/books/university-physics-volume-3/pages/11-1-introduction-to-particle-physics",
+    "note": "Спин, фермионы и бозоны; начальные понятия физики частиц."
+  },
+  {
+    "id": 13,
+    "title": "OpenStax — The Standard Model",
+    "url": "https://openstax.org/books/university-physics-volume-3/pages/11-5-the-standard-model",
+    "note": "Взаимодействия и переносчики; сильный и электрослабый секторы."
+  },
+  {
+    "id": 14,
+    "title": "CERN — The Large Hadron Collider",
+    "url": "https://home.cern/science/accelerators/large-hadron-collider",
+    "note": "Встречные пучки, задачи коллайдера и роль экспериментов."
+  },
+  {
+    "id": 15,
+    "title": "ЦКП «СКИФ» — о проекте",
+    "url": "https://skif-lightsource.ru/about",
+    "note": "Назначение Сибирского кольцевого источника фотонов."
+  },
+  {
+    "id": 16,
+    "title": "ЦКП «СКИФ» — инфраструктура",
+    "url": "https://srf-skif.ru/index.php/Инфраструктура_СКИФ",
+    "note": "Накопительное кольцо, синхротронное излучение и экспериментальные станции; источник фотографии."
+  },
+  {
+    "id": 17,
+    "title": "Julian Herzog — CERN LHC Tunnel1",
+    "url": "https://commons.wikimedia.org/wiki/File:CERN_LHC_Tunnel1.jpg",
+    "note": "Фотография тоннеля БАК, CC BY-SA 3.0. В Commons опубликована версия с коррекцией яркости Soerfm."
+  },
+  {
+    "id": 18,
+    "title": "CERN Open Data — Quark",
+    "url": "https://opendata.cern.ch/glossary/Quark",
+    "note": "Шесть ароматов, дробные электрические заряды и конфайнмент."
+  },
+  {
+    "id": 19,
+    "title": "Particle Data Group / The Particle Adventure — Color charge",
+    "url": "https://particleadventure.org/color.html",
+    "note": "Цвет, антицвет, бесцветные адроны и глюонные состояния. Цвет — квантовое свойство, а не окраска."
+  },
+  {
+    "id": 20,
+    "title": "OpenStax — Nuclear Reactions",
+    "url": "https://openstax.org/books/university-physics-volume-3/pages/10-4-nuclear-reactions",
+    "note": "Ядерная запись A и Z, β⁻- и β⁺-распад, энергетическая невозможность β⁺-распада свободного протона."
+  },
+  {
+    "id": 21,
+    "title": "OpenStax — Nuclear Decay and Conservation Laws",
+    "url": "https://openstax.org/books/college-physics-2e/pages/31-4-nuclear-decay-and-conservation-laws",
+    "note": "Три вида бета-превращений, включая электронный захват; изменения A и Z."
+  },
+  {
+    "id": 22,
+    "title": "Jefferson Lab — Pion Form Factor",
+    "url": "https://www.jlab.org/research/pion_form",
+    "note": "Пионы как лёгкие мезоны; различие валентной структуры и полного кварк-глюонного описания."
+  },
+  {
+    "id": 23,
+    "title": "OpenStax — Quarks (Physics)",
+    "url": "https://openstax.org/books/physics/pages/23-2-quarks",
+    "note": "Независимость аромата и цвета; глюонный обмен и цветовая нейтральность."
+  }
+];
+const NAV = [
+  [
+    "home",
+    "Обзор курса",
+    "⌂"
+  ],
+  [
+    "intro",
+    "Входная диагностика",
+    "00"
+  ],
+  [
+    "module1",
+    "Классификация частиц",
+    "01"
+  ],
+  [
+    "module2",
+    "Четыре взаимодействия",
+    "02"
+  ],
+  [
+    "module3",
+    "Ускорители и эксперименты",
+    "03"
+  ],
+  [
+    "practice",
+    "Практикум",
+    "04"
+  ],
+  [
+    "quiz",
+    "Итоговый тест",
+    "05"
+  ],
+  [
+    "reflection",
+    "Рефлексия",
+    "06"
+  ],
+  [
+    "certificate",
+    "Сертификат",
+    "◇"
+  ],
+  [
+    "resources",
+    "Источники и словарь",
+    "↗"
+  ],
+  [
+    "about",
+    "О курсе",
+    "i"
+  ]
+];
+const DIAGNOSTIC = [
+  {
+    "id": "d1",
+    "text": "Какая из этих частиц в Стандартной модели считается элементарной?",
+    "options": [
+      "Протон",
+      "Электрон",
+      "Нейтрон",
+      "Ядро гелия"
+    ],
+    "answer": 1,
+    "explain": "Электрон — фундаментальный лептон. Протон и нейтрон имеют кварк-глюонную структуру, а ядро гелия состоит из нуклонов.",
+    "source": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "d2",
+    "text": "Нейтральная частица обязательно не участвует ни в каких взаимодействиях?",
+    "options": [
+      "Да: для любого взаимодействия нужен электрический заряд",
+      "Нет: электрическая нейтральность не исключает других взаимодействий",
+      "Да, если у неё нет внутренней структуры"
+    ],
+    "answer": 1,
+    "explain": "Электрический заряд связан с электромагнитным взаимодействием. Например, нейтрино электрически нейтральны, но участвуют в слабом взаимодействии.",
+    "source": [
+      1,
+      6
+    ]
+  },
+  {
+    "id": "d3",
+    "text": "Зачем нужен коллайдер?",
+    "options": [
+      "Чтобы сталкивать встречные пучки частиц и изучать результаты столкновений",
+      "Чтобы видеть отдельные электроны как маленькие шарики",
+      "Только для исследования строения кристаллов рентгеновским излучением"
+    ],
+    "answer": 0,
+    "explain": "Коллайдер создаёт столкновения встречных пучков. Детекторы регистрируют продукты столкновений. Для исследования материалов рентгеновским излучением применяют в том числе синхротронные источники, например СКИФ.",
+    "source": [
+      14,
+      15
+    ]
+  }
+];
+const CHECKPOINTS = {
+  "module1": [
+    {
+      "id": "c1",
+      "text": "Почему нейтрон не относится к элементарным частицам, хотя его электрический заряд равен нулю?",
+      "options": [
+        "Нулевая масса всегда означает составную частицу",
+        "У него есть внутренняя кварк-глюонная структура",
+        "Все нейтральные частицы составные"
+      ],
+      "answer": 1,
+      "explain": "Критерий элементарности — отсутствие установленной внутренней структуры, а не знак заряда. Нейтрон имеет валентный состав udd и ненулевую массу.",
+      "source": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": "c1b",
+      "text": "У u-кварка изменился цвет с красного на зелёный. Что осталось неизменным?",
+      "options": [
+        "Он обязательно превратился в d-кварк",
+        "Его аромат u и заряд +2e/3",
+        "Он стал электрически нейтральным"
+      ],
+      "answer": 1,
+      "explain": "Цвет и аромат — разные свойства. Смена цвета при сильном взаимодействии не меняет аромат и электрический заряд.",
+      "source": [
+        18,
+        19,
+        23
+      ]
+    },
+    {
+      "id": "c1c",
+      "text": "Какая запись описывает обычный мезон?",
+      "options": [
+        "Три валентных кварка",
+        "Кварк и электрон",
+        "Валентный кварк и антикварк"
+      ],
+      "answer": 2,
+      "explain": "Обычный мезон имеет валентную структуру q q̄. Пионы — примеры мезонов. Глюонное поле и дополнительные пары входят в более полное описание.",
+      "source": [
+        2,
+        22
+      ]
+    },
+    {
+      "id": "c1d",
+      "text": "Почему π⁺ можно назвать и адроном, и бозоном?",
+      "options": [
+        "Адрон означает составную кварк-глюонную структуру, бозон — целый спин",
+        "Потому что у всех адронов заряд +e",
+        "Потому что мезон обязательно элементарный"
+      ],
+      "answer": 0,
+      "explain": "Признаки не исключают друг друга: π⁺ — составной мезон со спином 0.",
+      "source": [
+        2,
+        12
+      ]
+    }
+  ],
+  "module2": [
+    {
+      "id": "c2",
+      "text": "Для некоторого предполагаемого распада суммарный электрический заряд до и после одинаков. Что из этого можно заключить?",
+      "options": [
+        "Распад обязательно происходит",
+        "Заряд — единственное ограничение для распадов",
+        "Выполнено одно необходимое условие; нужны остальные проверки"
+      ],
+      "answer": 2,
+      "explain": "Помимо заряда проверяют энергию, импульс, момент импульса и применимые квантовые числа. Даже кинематически разрешённый процесс требует допустимого механизма взаимодействия.",
+      "source": [
+        4
+      ]
+    },
+    {
+      "id": "c2b",
+      "text": "Ядро испытывает β⁻-распад. Что происходит с A и Z?",
+      "options": [
+        "A уменьшается на 1, Z не меняется",
+        "A сохраняется, Z увеличивается на 1",
+        "A сохраняется, Z уменьшается на 1"
+      ],
+      "answer": 1,
+      "explain": "Нейтрон превращается в протон, общее число нуклонов сохраняется. Поэтому A прежнее, а Z на единицу больше.",
+      "source": [
+        20,
+        21
+      ]
+    },
+    {
+      "id": "c2c",
+      "text": "Что отличает электронный захват от β⁺-распада?",
+      "options": [
+        "При захвате A увеличивается на 1",
+        "При захвате испускается позитрон",
+        "При захвате электрон поглощается, а позитрон не испускается"
+      ],
+      "answer": 2,
+      "explain": "В электронном захвате e⁻ стоит слева от стрелки; в β⁺-распаде e⁺ стоит справа. В обоих случаях Z уменьшается на 1.",
+      "source": [
+        21
+      ]
+    }
+  ],
+  "module3": [
+    {
+      "id": "c3",
+      "text": "Чем СКИФ принципиально отличается от БАК в рассматриваемых задачах?",
+      "options": [
+        "СКИФ предназначен для получения синхротронного излучения и исследования образцов, а БАК — для столкновения пучков и изучения частиц",
+        "СКИФ — ещё один протонный коллайдер",
+        "Разницы нет: любая кольцевая установка решает одну и ту же задачу"
+      ],
+      "answer": 0,
+      "explain": "В СКИФ используют излучение электронов в накопительном кольце. В БАК исследуют продукты столкновений встречных пучков. Кольцевая форма сама по себе не определяет назначение установки.",
+      "source": [
+        14,
+        15,
+        16
+      ]
+    }
+  ]
+};
+// Вопросы, варианты, индекс правильного ответа (с нуля) и объяснение.
+const QUIZ = [
+  {
+    "id": "q1",
+    "topic": "Классификация",
+    "text": "Какая пара целиком состоит из фундаментальных фермионов Стандартной модели?",
+    "options": [
+      "Протон и нейтрон",
+      "Электрон и u-кварк",
+      "Фотон и глюон",
+      "Бозон Хиггса и пион"
+    ],
+    "answer": 1,
+    "explain": "Электрон — лептон, u-кварк — кварк; оба имеют спин 1/2. Протон, нейтрон и пион составные, а фотон, глюон и бозон Хиггса — бозоны.",
+    "source": [
+      1,
+      2
+    ]
+  },
+  {
+    "id": "q2",
+    "topic": "Кварковый состав",
+    "text": "Каков заряд бариона с валентным составом uuu?",
+    "options": [
+      "+e",
+      "0",
+      "+3e",
+      "+2e"
+    ],
+    "answer": 3,
+    "explain": "Каждый u-кварк имеет заряд +2e/3. Складываем три заряда: Q = 3 × 2e/3 = +2e. Такой валентный состав имеет Δ⁺⁺.",
+    "source": [
+      2
+    ]
+  },
+  {
+    "id": "q3",
+    "topic": "Античастицы",
+    "text": "Какие свойства имеет позитрон по сравнению с электроном?",
+    "options": [
+      "Та же масса и заряд +e",
+      "Отрицательная масса и заряд +e",
+      "Та же масса и заряд −e",
+      "Нулевая масса и заряд 0"
+    ],
+    "answer": 0,
+    "explain": "Позитрон — античастица электрона: масса и спин совпадают, электрический заряд противоположен. Античастица не означает частицу с отрицательной массой.",
+    "source": [
+      3
+    ]
+  },
+  {
+    "id": "q4",
+    "topic": "Взаимодействия",
+    "text": "Какие калибровочные бозоны переносят слабое взаимодействие?",
+    "options": [
+      "Только фотоны",
+      "Глюоны",
+      "W⁺, W⁻ и Z⁰",
+      "Только бозоны Хиггса"
+    ],
+    "answer": 2,
+    "explain": "Слабое взаимодействие связано с W⁺, W⁻ и Z⁰. Фотоны относятся к электромагнитному, глюоны — к сильному взаимодействию. Бозон Хиггса — скаляр, а не один из этих калибровочных переносчиков.",
+    "source": [
+      1,
+      5
+    ]
+  },
+  {
+    "id": "q5",
+    "topic": "Четыре взаимодействия",
+    "text": "Какое утверждение о гравитации верно?",
+    "options": [
+      "Гравитация не существует, потому что её нет в Стандартной модели",
+      "Гравитация существует, но не входит в Стандартную модель; гравитон пока не обнаружен",
+      "Гравитацию переносят глюоны",
+      "Гравитон входит в число экспериментально открытых частиц Стандартной модели"
+    ],
+    "answer": 1,
+    "explain": "Нужно различать существование взаимодействия и обнаружение его предполагаемого кванта. Гравитация наблюдается, но квантовый переносчик — гравитон — остаётся гипотетическим.",
+    "source": [
+      1
+    ]
+  },
+  {
+    "id": "q6",
+    "topic": "Бета-распад",
+    "text": "Какая частица дополняет β⁻-распад свободного нейтрона: ¹₀n → ¹₁p + ⁰₋₁e + … ?",
+    "options": [
+      "Электронное нейтрино νₑ",
+      "Позитрон e⁺",
+      "Фотон γ вместо нейтрино",
+      "Электронное антинейтрино ν̅ₑ"
+    ],
+    "answer": 3,
+    "explain": "В этом процессе электрон имеет лептонное число +1, антинейтрино −1; исходный нейтрон и конечный протон — 0. Сумма остаётся нулевой. Один лишь электрический заряд не различает нейтрино и антинейтрино.",
+    "source": [
+      4
+    ]
+  },
+  {
+    "id": "q7",
+    "topic": "Классификация",
+    "text": "Какое утверждение о протоне корректно?",
+    "options": [
+      "Это элементарный лептон",
+      "Это составной бозон, потому что состоит из кварков",
+      "Это составной адрон и фермион со спином 1/2",
+      "Это переносчик сильного взаимодействия"
+    ],
+    "answer": 2,
+    "explain": "Протон — барион с валентным составом uud. Он имеет внутреннюю структуру и спин 1/2. Поэтому «адрон» и «фермион» могут одновременно описывать одну частицу.",
+    "source": [
+      2,
+      12
+    ]
+  },
+  {
+    "id": "q8",
+    "topic": "Эксперимент",
+    "text": "Какова основная роль детектора в эксперименте на коллайдере?",
+    "options": [
+      "Регистрировать сигналы от продуктов столкновений",
+      "Разгонять встречные пучки вместо ускорителя",
+      "Фотографировать внутренность кварков обычной камерой",
+      "Подтверждать открытие частицы по одному необычному событию"
+    ],
+    "answer": 0,
+    "explain": "Ускоритель подготавливает пучки и обеспечивает столкновения. Детектор измеряет сигналы, возникающие при взаимодействии частиц с его веществом. Для научного вывода нужны анализ и сопоставление многих событий.",
+    "source": [
+      8,
+      14,
+      5
+    ]
+  },
+  {
+    "id": "q9",
+    "topic": "БАК и СКИФ",
+    "text": "Какая задача соответствует назначению СКИФ?",
+    "options": [
+      "Поиск тяжёлой частицы в столкновениях двух встречных протонных пучков",
+      "Изучение атомной структуры материала с помощью синхротронного излучения",
+      "Доказательство отсутствия гравитации",
+      "Измерение траектории электрона внутри атома как классической орбиты"
+    ],
+    "answer": 1,
+    "explain": "Синхротронное излучение направляют на образец. По рассеянию, поглощению и другим сигналам исследуют структуру и свойства вещества. СКИФ не является протонным коллайдером.",
+    "source": [
+      15,
+      16
+    ]
+  },
+  {
+    "id": "q10",
+    "topic": "Стандартная модель",
+    "text": "Какие взаимодействия описывает Стандартная модель?",
+    "options": [
+      "Все четыре, включая квантовую гравитацию",
+      "Только сильное и гравитационное",
+      "Только электромагнитное",
+      "Сильное, электромагнитное и слабое"
+    ],
+    "answer": 3,
+    "explain": "В Стандартную модель входят сильное и электрослабое взаимодействия; при обычных энергиях выделяют электромагнитное и слабое. Гравитация остаётся за её пределами.",
+    "source": [
+      1,
+      13
+    ]
+  },
+  {
+    "id": "q11",
+    "text": "Какая тройка кварков имеет одинаковый электрический заряд +2e/3?",
+    "options": [
+      "u, d, s",
+      "u, c, t",
+      "d, s, b",
+      "c, s, b"
+    ],
+    "answer": 1,
+    "explain": "Кварки u, c, t имеют заряд +2e/3; d, s, b — −e/3. Одинаковый заряд не означает одинаковую массу или аромат.",
+    "source": [
+      18
+    ],
+    "topic": "Ароматы кварков"
+  },
+  {
+    "id": "q12",
+    "text": "Какое утверждение о цветовом заряде верно?",
+    "options": [
+      "Красный кварк излучает только красный свет",
+      "Цвет однозначно определяет аромат",
+      "Бесцветный адрон обязательно имеет электрический заряд 0",
+      "Цветовой и электрический заряды — разные свойства; бесцветный протон имеет заряд +e"
+    ],
+    "answer": 3,
+    "explain": "Бесцветность относится к сильному взаимодействию, а не к электрическому заряду. Цвет — условное название квантового свойства, не реальная окраска.",
+    "source": [
+      19,
+      23
+    ],
+    "topic": "Цветовой заряд"
+  }
+];
+const PARTICLES = [
+ {symbol:'u',name:'up-кварк',charge:'+⅔',spin:'½',type:'quark',detail:'Кварк первого поколения. Электрический заряд +2e/3, есть цветовой заряд. В валентном составе протона два u-кварка, нейтрона — один.'},
+ {symbol:'c',name:'charm-кварк',charge:'+⅔',spin:'½',type:'quark',detail:'Кварк второго поколения с зарядом +2e/3 и цветовым зарядом. Не относится к валентным составляющим обычных протонов и нейтронов.'},
+ {symbol:'t',name:'top-кварк',charge:'+⅔',spin:'½',type:'quark',detail:'Кварк третьего поколения с зарядом +2e/3. Как и другие кварки, участвует в сильном, электромагнитном и слабом взаимодействиях.'},
+ {symbol:'γ',name:'фотон',charge:'0',spin:'1',type:'boson',detail:'Квант электромагнитного поля. Электрически нейтрален, имеет нулевую массу покоя. Реальный фотон несёт энергию E и импульс величины E/c.'},
+ {symbol:'H',name:'бозон Хиггса',charge:'0',spin:'0',type:'scalar',detail:'Скалярный бозон — квантовое возбуждение поля Хиггса. Не является переносчиком сильного, электромагнитного или слабого взаимодействия в том же смысле, что g, γ, W и Z.'},
+ {symbol:'d',name:'down-кварк',charge:'−⅓',spin:'½',type:'quark',detail:'Кварк первого поколения с электрическим зарядом −e/3. Валентный состав протона — uud, нейтрона — udd.'},
+ {symbol:'s',name:'strange-кварк',charge:'−⅓',spin:'½',type:'quark',detail:'Кварк второго поколения с электрическим зарядом −e/3. Слово «странный» — историческое название аромата, а не особый вид электрического заряда.'},
+ {symbol:'b',name:'bottom-кварк',charge:'−⅓',spin:'½',type:'quark',detail:'Кварк третьего поколения с электрическим зарядом −e/3. Обозначение b относится к аромату кварка.'},
+ {symbol:'g',name:'глюон',charge:'0',spin:'1',type:'boson',detail:'Калибровочный бозон сильного взаимодействия. Электрический заряд равен нулю, но глюон несёт цветовой заряд. В КХД восемь глюонных цветовых состояний.'},
+ null,
+ {symbol:'e',name:'электрон',charge:'−1',spin:'½',type:'lepton',detail:'Заряженный лептон первого поколения. Электрический заряд −e, цветового заряда нет. Позитрон e⁺ — его античастица.'},
+ {symbol:'μ',name:'мюон',charge:'−1',spin:'½',type:'lepton',detail:'Заряженный лептон второго поколения. Имеет те же электрический заряд и спин, что электрон, но отличается массой; не является составным электроном.'},
+ {symbol:'τ',name:'тау-лептон',charge:'−1',spin:'½',type:'lepton',detail:'Заряженный лептон третьего поколения. Электрический заряд −e, спин 1/2; цветового заряда нет.'},
+ {symbol:'Z',name:'Z-бозон',charge:'0',spin:'1',type:'boson',detail:'Электрически нейтральный калибровочный бозон слабого взаимодействия. Масса не равна нулю: электрическая нейтральность не означает безмассовость.'},
+ null,
+ {symbol:'νₑ',name:'e-нейтрино',charge:'0',spin:'½',type:'lepton',detail:'Электронное нейтрино — нейтральный лептон. Это ароматное состояние; в β⁻-распаде рождается электронное антинейтрино. Осцилляции связывают ароматные и массовые состояния.'},
+ {symbol:'νμ',name:'μ-нейтрино',charge:'0',spin:'½',type:'lepton',detail:'Мюонное нейтрино — ароматное состояние нейтрино, связанное в заряженных слабых токах с мюоном. Не имеет электрического или цветового заряда.'},
+ {symbol:'ντ',name:'τ-нейтрино',charge:'0',spin:'½',type:'lepton',detail:'Тау-нейтрино — ароматное состояние нейтрино, связанное в заряженных слабых токах с тау-лептоном. Оно не тождественно отдельному массовому состоянию.'},
+ {symbol:'W±',name:'W-бозоны',charge:'±1',spin:'1',type:'boson',detail:'W⁺ и W⁻ — два электрически заряженных калибровочных бозона слабого взаимодействия. Одна карточка объединяет их для компактности.'},
+ null
+];
+const GLOSSARY = [
+  [
+    "Элементарная частица",
+    "В используемой теории описывается без внутренней структуры; экспериментально составляющие не обнаружены. Это не утверждение о неделимости «навсегда»."
+  ],
+  [
+    "Фермион",
+    "Частица с полуцелым спином: 1/2, 3/2 и так далее. Для одинаковых фермионов действует принцип Паули. Фермионы бывают элементарными и составными."
+  ],
+  [
+    "Бозон",
+    "Частица с целым спином: 0, 1, 2 и так далее. Одинаковые бозоны могут занимать одно квантовое состояние. Бозоны бывают элементарными и составными."
+  ],
+  [
+    "Адрон",
+    "Частица, связанная сильным взаимодействием и имеющая кварк-глюонную структуру. Обычные барионы имеют три валентных кварка, обычные мезоны — кварк и антикварк."
+  ],
+  [
+    "Аромат",
+    "Название типа кварка или лептона, а не механическое свойство или вкус."
+  ],
+  [
+    "Цветовой заряд",
+    "Квантовое свойство, определяющее участие в сильном взаимодействии; не связан с видимым цветом."
+  ],
+  [
+    "Античастица",
+    "Частица с той же массой и спином, но противоположными знаками аддитивных зарядов. Некоторые нейтральные частицы совпадают со своими античастицами."
+  ],
+  [
+    "Трек",
+    "Траектория, восстановленная по набору зарегистрированных точек взаимодействия частицы с чувствительным веществом."
+  ],
+  [
+    "Калориметр",
+    "Детектор, оценивающий энергию по сигналу, возникающему при поглощении частицы и развитии каскада вторичных частиц."
+  ],
+  [
+    "Лептон",
+    "Элементарный фермион без цветового заряда. К лептонам относятся электрон, мюон, тау-лептон и соответствующие нейтрино."
+  ],
+  [
+    "Спин",
+    "Собственный квантовый момент импульса частицы. Это не вращение маленького шарика вокруг своей оси."
+  ],
+  [
+    "Коллайдер",
+    "Ускорительная установка, в которой сталкиваются встречные пучки частиц."
+  ],
+  [
+    "Синхротронное излучение",
+    "Электромагнитное излучение релятивистских заряженных частиц при изменении направления их движения. В СКИФ для его получения используют электроны."
+  ],
+  [
+    "Аромат кварка",
+    "Вид кварка: u, d, c, s, t или b. Аромат нельзя отождествлять с цветовым зарядом."
+  ],
+  [
+    "Цветовой заряд",
+    "Квантовое свойство кварков и глюонов, связанное с сильным взаимодействием. Три базисных цвета — красный, зелёный и синий — не являются видимыми цветами."
+  ],
+  [
+    "Цветовой синглет",
+    "Квантовое состояние, не несущее суммарного цветового заряда. Обычные наблюдаемые адроны находятся в таких состояниях."
+  ],
+  [
+    "Пион",
+    "Лёгкий нестабильный мезон со спином 0. Существуют π⁺, π⁰, π⁻; пионы являются адронами и бозонами."
+  ],
+  [
+    "Массовое число A",
+    "Число нуклонов в ядре: A = Z + N. Это целое число, а не масса в килограммах."
+  ],
+  [
+    "Зарядовое число Z",
+    "Число протонов в ядре; заряд ядра равен +Ze. В записи частиц в ядерных уравнениях нижний индекс указывает заряд в единицах e."
+  ],
+  [
+    "Электронный захват",
+    "Бета-превращение: ядро поглощает электрон, протон превращается в нейтрон и испускается электронное нейтрино. A сохраняется, Z уменьшается на 1."
+  ]
+];
+// Учебные модули: заголовок, длительность, текст и основной вывод.
+const MODULES = {
+  "module1": {
+    "title": "Частицы и их классификация",
+    "time": "15 минут",
+    "number": "01",
+    "subtitle": "От молекул к частицам: классификация, шесть ароматов кварков, цветовой заряд и пионы.",
+    "body": "<h2>Начнём с атома</h2>\n<p>Атом состоит из ядра и электронной оболочки. В ядре находятся нуклоны: протоны и, кроме ядра обычного водорода, нейтроны. У нуклонов есть внутренняя кварк-глюонная структура. Электрон и кварки считаются элементарными: их более мелкие составляющие не установлены. [SRC1] [SRC2]</p>\n<div class=\"structure-cards\"><figure class=\"structure-step\"><figcaption>Атом</figcaption><svg viewBox=\"0 0 180 120\" role=\"img\" aria-label=\"Условная схема атома: ядро в окружении электронной оболочки\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"90\" cy=\"60\" rx=\"65\" ry=\"44\" fill=\"#eef3fa\" stroke=\"#b9c9df\" stroke-dasharray=\"4 5\"/><ellipse cx=\"90\" cy=\"60\" rx=\"65\" ry=\"21\" fill=\"none\" stroke=\"#b9c9df\"/><circle cx=\"90\" cy=\"60\" r=\"12\" fill=\"#47678f\"/><circle cx=\"29\" cy=\"53\" r=\"5\" fill=\"#347d72\"/><circle cx=\"137\" cy=\"91\" r=\"5\" fill=\"#347d72\"/><circle cx=\"119\" cy=\"21\" r=\"5\" fill=\"#347d72\"/></svg></figure><figure class=\"structure-step\"><figcaption>Ядро и электронная оболочка</figcaption><svg viewBox=\"0 0 180 120\" role=\"img\" aria-label=\"Ядро и условная электронная оболочка: облако не является траекторией электрона\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"90\" cy=\"60\" rx=\"61\" ry=\"45\" fill=\"#eaf3f2\" stroke=\"#b1cfc8\" stroke-dasharray=\"4 4\"/><ellipse cx=\"90\" cy=\"60\" rx=\"42\" ry=\"31\" fill=\"#dcebea\"/><circle cx=\"83\" cy=\"56\" r=\"10\" fill=\"#47678f\"/><circle cx=\"100\" cy=\"56\" r=\"10\" fill=\"#7891b2\"/><circle cx=\"91\" cy=\"71\" r=\"10\" fill=\"#47678f\"/><circle cx=\"39\" cy=\"82\" r=\"5\" fill=\"#347d72\"/><circle cx=\"140\" cy=\"38\" r=\"5\" fill=\"#347d72\"/></svg></figure><figure class=\"structure-step\"><figcaption>Нуклоны в ядре</figcaption><svg viewBox=\"0 0 180 120\" role=\"img\" aria-label=\"Схематическое ядро из протонов и нейтронов\" xmlns=\"http://www.w3.org/2000/svg\"><circle cx=\"90\" cy=\"60\" r=\"45\" fill=\"#edf1f8\" stroke=\"#cad5e5\"/><g stroke=\"white\" stroke-width=\"2\"><circle cx=\"75\" cy=\"45\" r=\"17\" fill=\"#47678f\"/><circle cx=\"103\" cy=\"45\" r=\"17\" fill=\"#899cb8\"/><circle cx=\"75\" cy=\"74\" r=\"17\" fill=\"#899cb8\"/><circle cx=\"103\" cy=\"74\" r=\"17\" fill=\"#47678f\"/></g><g text-anchor=\"middle\" font-family=\"Arial\" font-size=\"15\" fill=\"white\"><text x=\"75\" y=\"50\">p</text><text x=\"103\" y=\"50\">n</text><text x=\"75\" y=\"79\">n</text><text x=\"103\" y=\"79\">p</text></g></svg></figure><figure class=\"structure-step\"><figcaption>Кварки и глюоны</figcaption><svg viewBox=\"0 0 180 120\" role=\"img\" aria-label=\"Нуклон: три валентных кварка и условно показанное глюонное поле\" xmlns=\"http://www.w3.org/2000/svg\"><ellipse cx=\"90\" cy=\"60\" rx=\"64\" ry=\"47\" fill=\"#f4f6fa\" stroke=\"#cad5e5\"/><g fill=\"none\" stroke=\"#7889a4\" stroke-width=\"2\"><path d=\"M76 35 Q65 43 77 48 T78 61 T77 77\"/><path d=\"M80 34 Q99 23 98 43 T118 58 T120 77\"/><path d=\"M80 81 Q88 69 99 81 T121 80\"/></g><circle cx=\"77\" cy=\"31\" r=\"13\" fill=\"#bd5c68\"/><circle cx=\"68\" cy=\"81\" r=\"13\" fill=\"#3b8876\"/><circle cx=\"123\" cy=\"80\" r=\"13\" fill=\"#4f79b5\"/><g font-family=\"Arial\" font-size=\"14\" fill=\"white\" text-anchor=\"middle\"><text x=\"77\" y=\"36\">q</text><text x=\"68\" y=\"86\">q</text><text x=\"123\" y=\"85\">q</text></g></svg></figure></div>\n<h2>Четыре понятия, которые важно различать</h2>\n<p><strong>Спин</strong> — собственный квантовый момент импульса частицы, а не вращение маленького шарика. Ниже s — квантовое число спина. По нему различают фермионы и бозоны; слова «лептон» и «адрон» описывают уже другие свойства.</p>\n<div class=\"definition-grid\">\n<section><h3>Фермионы</h3><p>Частицы с полуцелым спином: s = 1/2, 3/2 и так далее. Для одинаковых фермионов действует принцип Паули: два из них не могут занимать одно и то же полное квантовое состояние. Фермион может быть как элементарным, так и составным.</p><p class=\"examples\"><strong>Примеры:</strong> электрон, мюон, нейтрино, кварки; из составных — протон и нейтрон.</p></section>\n<section><h3>Бозоны</h3><p>Частицы с целым спином: s = 0, 1, 2 и так далее. Несколько одинаковых бозонов могут занимать одно квантовое состояние. Не всякий бозон переносит фундаментальное взаимодействие: среди бозонов есть и составные частицы.</p><p class=\"examples\"><strong>Примеры:</strong> фотон, глюон, W- и Z-бозоны, бозон Хиггса; из составных — пионы.</p></section>\n<section><h3>Лептоны</h3><p>Элементарные фермионы со спином 1/2, не имеющие цветового заряда и не участвующие в сильном взаимодействии. Существуют три заряженных лептона и три соответствующих нейтрино, а также их античастицы. Электрическая нейтральность не исключает принадлежности к лептонам.</p><p class=\"examples\"><strong>Примеры:</strong> электрон e⁻, мюон μ⁻, тау-лептон τ⁻; нейтрино ν<sub>e</sub>, ν<sub>μ</sub>, ν<sub>τ</sub>.</p></section>\n<section><h3>Адроны</h3><p>Составные частицы, связанные сильным взаимодействием и имеющие кварк-глюонную структуру. Обычные барионы имеют три валентных кварка, антибарионы — три антикварка, мезоны — кварк и антикварк. Адроны в целом бесцветны, но участвуют в сильных процессах. Это могут быть фермионы или бозоны.</p><p class=\"examples\"><strong>Примеры:</strong> протон и нейтрон — барионы; пионы π⁺, π⁰, π⁻ — мезоны.</p></section>\n</div><div class=\"source-note\">Определения и примеры: [SRC12] [SRC2] [SRC1].</div>\n<figure class=\"particle-classification\" aria-label=\"Классификация элементарных частиц и адронов\">\n <figcaption>Схема классификации частиц</figcaption>\n <div class=\"pc-root\">Элементарные частицы</div>\n <div class=\"pc-top-branches\">\n  <section class=\"pc-fermions\">\n   <h3 class=\"pc-heading\">Фермионы<small>Спин ½</small></h3>\n   <div class=\"pc-pair pc-subbranches\">\n    <section class=\"pc-family\"><h4>Кварки</h4><div class=\"pc-generation\"><b>I поколение</b><span>u — верхний</span><span>d — нижний</span></div><div class=\"pc-generation\"><b>II поколение</b><span>c — очарованный</span><span>s — странный</span></div><div class=\"pc-generation\"><b>III поколение</b><span>t — истинный</span><span>b — прелестный</span></div></section>\n    <section class=\"pc-family\"><h4>Лептоны</h4><div class=\"pc-generation\"><b>I поколение</b><span>Электрон</span><span>Электронное нейтрино</span></div><div class=\"pc-generation\"><b>II поколение</b><span>Мюон</span><span>Мюонное нейтрино</span></div><div class=\"pc-generation\"><b>III поколение</b><span>Тау-лептон</span><span>Тау-нейтрино</span></div></section>\n   </div>\n  </section>\n  <section class=\"pc-bosons\">\n   <h3 class=\"pc-heading\">Бозоны<small>Целый спин</small></h3>\n   <div class=\"pc-boson-types\">\n    <section class=\"pc-family\"><h4>Бозоны-переносчики<small>Спин 1 — векторные бозоны</small></h4><div class=\"pc-boson-item\"><b>Фотон γ</b><span>Электромагнитное взаимодействие</span></div><div class=\"pc-boson-item\"><b>Глюоны g</b><span>Сильное взаимодействие</span></div><div class=\"pc-boson-item\"><b>W⁺, W⁻, Z⁰</b><span>Слабое взаимодействие</span></div></section>\n    <section class=\"pc-family pc-higgs\"><h4>Бозон Хиггса<small>Спин 0 — скалярный бозон</small></h4></section>\n   </div>\n  </section>\n </div>\n <div class=\"pc-composition\"><span>Связанные системы кварков и антикварков</span><span aria-hidden=\"true\">↓</span></div>\n <div class=\"pc-root pc-composite-root\">Адроны<small>Составные частицы с кварк-глюонной структурой</small></div>\n <div class=\"pc-pair pc-hadron-branches\">\n  <section class=\"pc-family\"><h4>Барионы<small>Обычный валентный состав — три кварка</small></h4><div class=\"pc-subgroup-label\">Примеры групп</div><div class=\"pc-pair pc-baryon-types\"><div class=\"pc-example\"><b>Гипероны</b></div><div class=\"pc-example\"><b>Нуклоны</b><div class=\"pc-nucleons\"><span>Протон</span><span>Нейтрон</span></div></div></div></section>\n  <section class=\"pc-family\"><h4>Мезоны<small>Обычный валентный состав — кварк и антикварк</small></h4><div class=\"pc-meson-example\">Например, пионы</div></section>\n </div>\n</figure>\n<figure class=\"learning-tree\" aria-label=\"Схема классификации частиц по строению\">\n <figcaption>1. По внутреннему строению</figcaption><div class=\"tree-root\">Частицы, рассматриваемые в курсе</div>\n <div class=\"tree-branches\"><section class=\"tree-branch\"><h3>Элементарные</h3><p>Внутренние составляющие не установлены</p><div class=\"tree-node\"><strong>Кварки</strong><span>Шесть ароматов; цветовой заряд</span></div><div class=\"tree-node\"><strong>Лептоны</strong><span>Шесть типов; без цветового заряда</span></div><div class=\"tree-node\"><strong>Элементарные бозоны</strong><span>Калибровочные и скалярный</span></div></section>\n <section class=\"tree-branch\"><h3>Составные: адроны</h3><p>Имеют кварк-глюонную структуру</p><div class=\"tree-node\"><strong>Барионы</strong><span>Обычный валентный состав: три кварка</span></div><div class=\"tree-node\"><strong>Мезоны</strong><span>Обычный валентный состав: кварк + антикварк</span></div></section></div>\n <p class=\"tree-note\">Это схема для данного курса, а не перечень всех составных объектов: ядра и атомы тоже имеют внутреннее строение. У адронов существуют и более сложные кварковые конфигурации.</p></figure>\n <figure class=\"learning-tree\" aria-label=\"Схема классификации частиц по спину\"><figcaption>2. По спину — другой признак классификации</figcaption><div class=\"tree-root\">Каков спин частицы?</div><div class=\"tree-branches\"><section class=\"tree-branch\"><h3>Фермионы</h3><p>Полуцелый спин: 1/2, 3/2, …</p><div class=\"tree-node\"><strong>Элементарные</strong><span>Кварки и лептоны</span></div><div class=\"tree-node\"><strong>Составные</strong><span>Обычные барионы</span></div></section><section class=\"tree-branch\"><h3>Бозоны</h3><p>Целый спин: 0, 1, 2, …</p><div class=\"tree-node\"><strong>Элементарные</strong><span>Калибровочные и скалярный</span></div><div class=\"tree-node\"><strong>Составные</strong><span>Обычные мезоны</span></div></section></div></figure>\n<div class=\"callout\"><strong>Проверь логику на одном примере.</strong> Протон одновременно составной, адрон, барион и фермион. Эти слова отвечают на разные вопросы, поэтому не исключают друг друга.</div>\n\n<h2>Кварки: шесть ароматов</h2>\n<p><strong>Аромат</strong> — название вида кварка. Это не запах и не цвет. Все кварки имеют спин 1/2 и цветовой заряд, но разные ароматы отличаются массами, электрическими зарядами и участием в слабых превращениях. Заряды совпадают внутри троек u, c, t и d, s, b. [SRC18]</p>\n<div class=\"table-wrap\"><table class=\"quark-table\"><caption>Шесть ароматов кварков. Заряды указаны в единицах e &gt; 0</caption><thead><tr><th>Поколение</th><th>Символ</th><th>Название</th><th>Q/e</th></tr></thead><tbody>\n<tr><td>I</td><td><b>u</b></td><td>up — верхний</td><td>+2/3</td></tr><tr><td>I</td><td><b>d</b></td><td>down — нижний</td><td>−1/3</td></tr>\n<tr><td>II</td><td><b>c</b></td><td>charm — очарованный</td><td>+2/3</td></tr><tr><td>II</td><td><b>s</b></td><td>strange — странный</td><td>−1/3</td></tr>\n<tr><td>III</td><td><b>t</b></td><td>top — t-кварк, истинный</td><td>+2/3</td></tr><tr><td>III</td><td><b>b</b></td><td>bottom / beauty — прелестный</td><td>−1/3</td></tr></tbody></table></div>\n<p>Самые лёгкие кварки — u и d. Именно они задают валентный состав обычных нуклонов. Остальные кварки тяжелее; t-кварк — самый тяжёлый. Номер поколения — не электрический заряд и не число кварков внутри частицы. Названия up и down не описывают направление движения. [SRC1] [SRC18]</p>\n<p>У каждого кварка есть антикварк: та же масса и спин, противоположный электрический заряд, антицвет вместо цвета. Черта над символом означает античастицу: например, у d заряд −e/3, а у <span class=\"antibar\">d</span> заряд +e/3. Античастицы не имеют отрицательной массы. [SRC2] [SRC3]</p>\n<h2>Что означает «цвет» кварка</h2>\n<p>Цветовой заряд — квантовое свойство, определяющее участие в сильном взаимодействии. Три его базисных состояния условно названы <strong>красным, зелёным и синим</strong>. У антикварков — соответствующие антицвета. [SRC19]</p>\n<div class=\"color-demo\" aria-label=\"Любой аромат кварка имеет три цветовых состояния\"><div class=\"color-token red\">u<sub>r</sub><small>красный</small></div><div class=\"color-token green\">u<sub>g</sub><small>зелёный</small></div><div class=\"color-token blue\">u<sub>b</sub><small>синий</small></div><p>Один аромат u, три цветовых состояния.<br>У всех трёх электрический заряд +2e/3.</p></div>\n<p><strong>Аромат и цвет независимы.</strong> Любой из шести ароматов может иметь любой из трёх цветов. Обмен глюонами может менять цвет кварка, но не превращает u-кварк в d-кварк. Изменение аромата возможно в слабых процессах. [SRC23]</p>\n<div class=\"color-combinations\"><section><h3>Барион</h3><div class=\"color-equation\"><span class=\"color-chip red\">r</span> + <span class=\"color-chip green\">g</span> + <span class=\"color-chip blue\">b</span> → <span>бесцветное состояние</span></div><p>Для обычного бариона удобно рисовать три разных цвета. Реальное квантовое состояние — не три навсегда окрашенных шарика, а цветовой синглет.</p></section><section><h3>Мезон</h3><div class=\"color-equation\"><span class=\"color-chip red\">r</span> + <span class=\"color-chip anti\">r̄</span> → <span>бесцветное состояние</span></div><p>На рисунке показана одна пара «цвет — соответствующий антицвет». Полный синглет включает суперпозицию таких пар для трёх цветов.</p></section></div>\n<p>«Бесцветный» не означает «электрически нейтральный»: протон и π⁺ бесцветны, но имеют заряд +e. Глюоны тоже несут цветовой заряд; в квантовой хромодинамике есть восемь независимых глюонных состояний. [SRC19] [SRC2]</p>\n<details><summary>Почему нельзя просто вынуть один кварк?</summary><div class=\"details-body\">При попытке разнести кварки энергия сильного поля растёт. При достаточной энергии могут родиться новые пары кварк–антикварк и образоваться новые адроны вместо одиночного свободного кварка. Это проявление конфайнмента. Условные «цветные суммы» выше не являются сложением настоящих красок. [SRC18] [SRC19]</div></details>\n<h2>Пионы: простейший пример мезонов</h2>\n<p><strong>Пионы, или π-мезоны</strong>, — лёгкие нестабильные адроны со спином 0. Поэтому они одновременно мезоны и бозоны. Их валентная структура содержит кварк и антикварк; полное описание включает также глюонное поле и кварк-антикварковые пары. Пион не является элементарной частицей или «половиной протона». [SRC22] [SRC2]</p>\n<div class=\"table-wrap\"><table><thead><tr><th>Пион</th><th>Валентная структура</th><th>Q/e</th><th>Спин</th></tr></thead><tbody><tr><td>π⁺</td><td>u<span class=\"antibar\">d</span></td><td>+1</td><td>0</td></tr><tr><td>π⁻</td><td>d<span class=\"antibar\">u</span></td><td>−1</td><td>0</td></tr><tr><td>π⁰</td><td>Квантовая комбинация u<span class=\"antibar\">u</span> и d<span class=\"antibar\">d</span></td><td>0</td><td>0</td></tr></tbody></table></div>\n<p>У π⁰ это не четыре валентных составляющих сразу, а суперпозиция двух конфигураций. Для заряженных пионов знак заряда легко получить сложением кварковых зарядов.</p>\n<h2>Как вычислить электрический заряд адрона</h2>\n<p>Для простых задач достаточно сложить заряды валентных кварков. У антикварка знак заряда противоположен. Запись валентного состава не означает, что внутри адрона больше ничего нет.</p>\n<div class=\"formula\">Протон uud: ⅔e + ⅔e − ⅓e = +e<br>Нейтрон udd: ⅔e − ⅓e − ⅓e = 0<br>Пион π⁺ = u<span class=\"antibar\">d</span>: ⅔e + ⅓e = +e</div>\n<div class=\"source-note\">Кварки, цвет и пионы: [SRC2] [SRC18] [SRC19] [SRC22] [SRC23].</div>",
+    "takeaway": "Строение и спин — разные признаки классификации. Кварк имеет аромат и цветовой заряд; эти свойства не следует смешивать. Пионы — составные мезоны со спином 0."
+  },
+  "module2": {
+    "title": "Четыре взаимодействия",
+    "time": "13 минут",
+    "number": "02",
+    "subtitle": "Четыре взаимодействия, Стандартная модель, обозначения A и Z и три вида бета-превращений.",
+    "body": "<h2>Сначала — четыре взаимодействия</h2><p>В физике различают четыре фундаментальных взаимодействия. Все четыре наблюдаются в природе, но действуют по-разному. Слово «переносчик» ниже означает квант соответствующего поля.</p><div class=\"definition-grid forces-cards\"><section><h3>Сильное</h3><p>Связывает кварки внутри адронов. Связано с цветовым зарядом; переносчики — глюоны. Остаточное сильное взаимодействие связывает нуклоны в ядре. Электрон и другие лептоны в нём не участвуют.</p><p class=\"small\"><strong>Масштаб:</strong> структура адронов и ядер; ядерные силы проявляются на расстояниях порядка размера ядра.</p></section><section><h3>Электромагнитное</h3><p>Связано с электрическим зарядом. Объясняет электрические и магнитные явления, строение электронных оболочек и химические связи. Переносчик — фотон γ.</p><p class=\"small\"><strong>Радиус действия:</strong> не имеет фундаментального конечного предела.</p></section><section><h3>Слабое</h3><p>Участвует в превращениях частиц, например в бета-распаде нейтрона. В нём участвуют и электрически нейтральные нейтрино. Переносчики — W⁺, W⁻ и Z⁰.</p><p class=\"small\"><strong>Масштаб:</strong> очень малые расстояния, порядка 10⁻¹⁸ м.</p></section><section><h3>Гравитационное</h3><p>Связано с энергией и импульсом; в привычном нерелятивистском описании — с массой. Описывает, например, движение планет. Предполагаемый квант поля — гравитон — пока не обнаружен.</p><p class=\"small\"><strong>Радиус действия:</strong> не имеет фундаментального конечного предела. В обычных экспериментах с частицами эффект очень мал.</p></section></div><div class=\"source-note\">Сводка взаимодействий: [SRC1] [SRC12] [SRC13].</div>\n<figure class=\"learning-tree forces-tree\" aria-label=\"Четыре фундаментальных взаимодействия и область Стандартной модели\"><figcaption>Четыре взаимодействия и Стандартная модель</figcaption><div class=\"tree-root\">Фундаментальные взаимодействия</div><div class=\"tree-branches\"><section class=\"tree-branch\"><h3>В Стандартной модели</h3><div class=\"tree-node\"><strong>Сильное</strong><span>Глюоны g</span></div><div class=\"tree-node\"><strong>Электрослабое описание</strong><span>Объединяет электромагнитное и слабое</span><div class=\"tree-sub\"><b>Электромагнитное → γ</b><b>Слабое → W⁺, W⁻, Z⁰</b></div></div></section><section class=\"tree-branch\"><h3>За пределами Стандартной модели</h3><div class=\"tree-node\"><strong>Гравитационное</strong><span>Гравитон — гипотетический квант, не обнаружен</span></div><p>Гравитация существует. Отсутствует не само взаимодействие, а его включение в Стандартную модель.</p></section></div></figure>\n<h2>Теперь — Стандартная модель</h2><p><strong>Стандартная модель</strong> — теория элементарных частиц и трёх взаимодействий: сильного, электромагнитного и слабого. Она не сводится к таблице частиц: теория описывает и их связи. Электромагнитное и слабое взаимодействия объединены электрослабым описанием; сильное описывается квантовой хромодинамикой.</p><p>В таблице ниже кварки и лептоны — фермионы со спином 1/2. Фотоны, глюоны, W- и Z-бозоны имеют спин 1. Бозон Хиггса H имеет спин 0; он связан с полем Хиггса, а не является переносчиком ещё одного из четырёх перечисленных взаимодействий.</p><p>Взаимодействие с полем Хиггса связано с массами кварков, заряженных лептонов, W- и Z-бозонов. Это не означает, что вся масса протона получается простым сложением масс его кварков. [SRC5] [SRC11]</p>\n[MODEL]\n<div class=\"table-wrap\"><table><thead><tr><th>Взаимодействие</th><th>Переносчик</th><th>В Стандартной модели?</th></tr></thead><tbody><tr><td>Сильное</td><td>Глюоны g</td><td>Да</td></tr><tr><td>Электромагнитное</td><td>Фотон γ</td><td>Да</td></tr><tr><td>Слабое</td><td>W⁺, W⁻, Z⁰</td><td>Да</td></tr><tr><td>Гравитационное</td><td>Гравитон — гипотетический, не обнаружен</td><td>Нет</td></tr></tbody></table></div><p class=\"small muted\">Глюоны нельзя выделить как свободные частицы, но сильное взаимодействие и роль глюонов подтверждаются экспериментами. Отсутствие свободного глюона — не то же самое, что отсутствие подтверждений его существования. [SRC10]</p>\n<h2>Как читать массовое и зарядовое числа</h2>\n<p>Ядро записывают в виде <span class=\"nuclide\" role=\"math\" aria-label=\"X: верхний индекс A, нижний индекс Z\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>A</span><span>Z</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">X</span></span>. <strong>A — массовое число</strong>, то есть число нуклонов: A = Z + N. <strong>Z — зарядовое (атомное) число</strong>, число протонов; заряд ядра равен +Ze. N — число нейтронов. A не равно массе ядра в килограммах. [SRC20]</p>\n<div class=\"notation-key\"><div><span class=\"nuclide\" role=\"math\" aria-label=\"C: верхний индекс 14, нижний индекс 6\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>14</span><span>6</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">C</span></span></div><p>У этого ядра 14 нуклонов: 6 протонов и 14 − 6 = 8 нейтронов. Индексы ставятся <strong>слева</strong>: A сверху, Z снизу.</p></div>\n<p>В записях реакций у электрона, позитрона и нейтрино верхний индекс 0 означает, что они не нуклоны, а не то, что их масса равна нулю. Нижний индекс показывает электрический заряд в единицах e: −1, +1 или 0. У нейтрино и антинейтрино оба индекса нулевые, поэтому отличать их нужно по символу и другим квантовым числам.</p>\n<h2>Три вида бета-превращений</h2>\n<p>Рассмотрим β⁻-распад, β⁺-распад и электронный захват. Все три связаны со слабым взаимодействием. Электронный захват обычно относят к семейству бета-превращений, хотя при нём электрон не испускается, а поглощается. Ни в одном из этих процессов A дочернего ядра не меняется. [SRC21]</p>\n<section class=\"beta-section\"><h3>1. β⁻-распад: нейтрон превращается в протон</h3><p>Испускаются электрон и электронное антинейтрино. Свободный нейтрон также может распадаться этим способом:</p><div class=\"formula nuclear-equation\"><span class=\"nuclide\" role=\"math\" aria-label=\"n: верхний индекс 1, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">n</span></span> → <span class=\"nuclide\" role=\"math\" aria-label=\"p: верхний индекс 1, нижний индекс 1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">p</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"e: верхний индекс 0, нижний индекс −1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>−1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">e</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"&lt;span class=&quot;antibar&quot;&gt;ν&lt;/span&gt;&lt;sub&gt;e&lt;/sub&gt;: верхний индекс 0, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\"><span class=\"antibar\">ν</span><sub>e</sub></span></span></div><p>Для ядра запись имеет вид:</p><div class=\"formula nuclear-equation\"><span class=\"nuclide\" role=\"math\" aria-label=\"X: верхний индекс A, нижний индекс Z\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>A</span><span>Z</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">X</span></span> → <span class=\"nuclide\" role=\"math\" aria-label=\"Y: верхний индекс A, нижний индекс Z + 1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>A</span><span>Z + 1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">Y</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"e: верхний индекс 0, нижний индекс −1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>−1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">e</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"&lt;span class=&quot;antibar&quot;&gt;ν&lt;/span&gt;&lt;sub&gt;e&lt;/sub&gt;: верхний индекс 0, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\"><span class=\"antibar\">ν</span><sub>e</sub></span></span></div><p><strong>A сохраняется, Z увеличивается на 1.</strong> Один нейтрон становится протоном, поэтому нейтронов на один меньше. Электрон образуется в процессе распада: он не был спрятан внутри нейтрона.</p><p>На кварковом уровне в нуклоне один d-кварк превращается в u-кварк с испусканием электрона и антинейтрино: d → u + e⁻ + ν̅<sub>e</sub>. [SRC4] [SRC20]</p></section>\n<section class=\"beta-section\"><h3>2. β⁺-распад: протон превращается в нейтрон</h3><p>В энергетически разрешённом ядерном переходе испускаются позитрон и электронное нейтрино:</p><div class=\"formula nuclear-equation\"><span class=\"nuclide\" role=\"math\" aria-label=\"X: верхний индекс A, нижний индекс Z\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>A</span><span>Z</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">X</span></span> → <span class=\"nuclide\" role=\"math\" aria-label=\"Y: верхний индекс A, нижний индекс Z − 1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>A</span><span>Z − 1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">Y</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"e: верхний индекс 0, нижний индекс +1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>+1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">e</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"ν&lt;sub&gt;e&lt;/sub&gt;: верхний индекс 0, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">ν<sub>e</sub></span></span></div><p>Схема превращения нуклона внутри ядра:</p><div class=\"formula nuclear-equation\"><span class=\"nuclide\" role=\"math\" aria-label=\"p: верхний индекс 1, нижний индекс 1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">p</span></span> → <span class=\"nuclide\" role=\"math\" aria-label=\"n: верхний индекс 1, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">n</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"e: верхний индекс 0, нижний индекс +1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>+1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">e</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"ν&lt;sub&gt;e&lt;/sub&gt;: верхний индекс 0, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">ν<sub>e</sub></span></span></div><p><strong>A сохраняется, Z уменьшается на 1.</strong> Протонов становится на один меньше, нейтронов — на один больше. Свободный протон так самопроизвольно не распадается: для этого не хватает энергии. Разрешённость конкретного ядерного перехода определяется разностью полных энергий начального и конечного состояний. [SRC20]</p></section>\n<section class=\"beta-section\"><h3>3. Электронный захват: электрон поглощается ядром</h3><p>Ядро захватывает электрон из атомной оболочки. Один протон превращается в нейтрон, испускается электронное нейтрино:</p><div class=\"formula nuclear-equation\"><span class=\"nuclide\" role=\"math\" aria-label=\"X: верхний индекс A, нижний индекс Z\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>A</span><span>Z</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">X</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"e: верхний индекс 0, нижний индекс −1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>−1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">e</span></span> → <span class=\"nuclide\" role=\"math\" aria-label=\"Y: верхний индекс A, нижний индекс Z − 1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>A</span><span>Z − 1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">Y</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"ν&lt;sub&gt;e&lt;/sub&gt;: верхний индекс 0, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">ν<sub>e</sub></span></span></div><div class=\"formula nuclear-equation\"><span class=\"nuclide\" role=\"math\" aria-label=\"p: верхний индекс 1, нижний индекс 1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">p</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"e: верхний индекс 0, нижний индекс −1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>−1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">e</span></span> → <span class=\"nuclide\" role=\"math\" aria-label=\"n: верхний индекс 1, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">n</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"ν&lt;sub&gt;e&lt;/sub&gt;: верхний индекс 0, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">ν<sub>e</sub></span></span></div><p><strong>A сохраняется, Z уменьшается на 1.</strong> В отличие от β⁺-распада, позитрон здесь не возникает: электрон находится в левой части уравнения и расходуется. После захвата оболочка перестраивается; возможны характеристическое рентгеновское излучение и оже-электроны. [SRC21]</p></section>\n<div class=\"table-wrap\"><table><thead><tr><th>Процесс</th><th>Что происходит</th><th>Изменение Z</th><th>Изменение A</th></tr></thead><tbody><tr><td>β⁻</td><td>Испускаются e⁻ и ν̅<sub>e</sub></td><td>+1</td><td>0</td></tr><tr><td>β⁺</td><td>Испускаются e⁺ и ν<sub>e</sub></td><td>−1</td><td>0</td></tr><tr><td>Электронный захват</td><td>Поглощается e⁻, испускается ν<sub>e</sub></td><td>−1</td><td>0</td></tr></tbody></table></div>\n<h2>Почему в β⁻-распаде именно антинейтрино?</h2>\n<p>Проверка заряда даёт 0 = (+1) + (−1) + 0. Но нейтрино и антинейтрино оба нейтральны. В рассматриваемых реакциях используем также <strong>лептонное число L</strong>: у лептона L = +1, у антилептона L = −1, у протона и нейтрона L = 0.</p>\n<div class=\"formula\">β⁻: 0 = 0 + 1 − 1<br>β⁺: 0 = 0 − 1 + 1<br>Захват: 0 + 1 = 0 + 1</div><p>Одновременно должны выполняться законы сохранения энергии, импульса и момента импульса. Совпадения только A и электрического заряда недостаточно, чтобы гарантировать возможность реакции. [SRC4] [SRC20] [SRC21]</p>\n<details><summary>Где заканчивается эта простая картина?</summary><div class=\"details-body\">Стандартная модель не включает гравитацию. Осцилляции нейтрино требуют ненулевых различий квадратов их масс, поэтому минимальную исходную модель с безмассовыми нейтрино нужно дополнить. Учёт лептонного числа выше относится к рассматриваемому бета-распаду, а не объявляет все отдельные лептонные числа универсально сохраняющимися. [SRC1] [SRC6]</div></details>",
+    "takeaway": "Стандартная модель описывает сильное, слабое и электромагнитное взаимодействия. В β⁻, β⁺ и электронном захвате A сохраняется; Z меняется. Для проверки реакции нужны и другие законы сохранения."
+  },
+  "module3": {
+    "title": "Ускорители и эксперименты",
+    "time": "8 минут",
+    "number": "03",
+    "subtitle": "Зачем нужны БАК, детекторы и СКИФ. От столкновения пучков к исследованию вещества.",
+    "body": "<h2>Как изучают то, что нельзя увидеть глазом</h2><p>В эксперименте измеряют не «фотографию частицы», а сигналы от её взаимодействия с веществом. Ускоритель подготавливает пучок, а детектор регистрирует результат. Чтобы не смешивать эти задачи, сравним два типа установок.</p>\n<h2>Большой адронный коллайдер — БАК</h2><figure class=\"science-photo\"><div class=\"photo-frame\"><img src=\"https://upload.wikimedia.org/wikipedia/commons/f/fc/CERN_LHC_Tunnel1.jpg\" alt=\"Тоннель Большого адронного коллайдера с магнитами\" loading=\"lazy\" referrerpolicy=\"no-referrer\" onload=\"this.parentElement.classList.add('loaded')\" onerror=\"this.hidden=true;this.parentElement.classList.add('unavailable')\"><div class=\"photo-fallback\"><strong>Тоннель Большого адронного коллайдера с магнитами</strong><span>Для загрузки фотографии нужен доступ к её источнику в интернете. Ссылка находится под изображением.</span></div></div><figcaption>Тоннель БАК. Фото: Julian Herzog / Wikimedia Commons, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 3.0</a>; опубликованная в Commons версия с коррекцией яркости Soerfm. [SRC17]</figcaption></figure>\n<p>БАК — кольцевой ускоритель в CERN с длиной кольца около 27 км. В нём сталкивают встречные пучки протонов или ионов. Высокая энергия столкновения позволяет исследовать процессы и создавать нестабильные частицы, которые затем распадаются. Протоны в названии «адронный» — не элементарные частицы, а адроны.</p><div class=\"plain-flow\"><span>Ускорение пучков</span><b>→</b><span>Столкновение</span><b>→</b><span>Продукты реакции</span><b>→</b><span>Сигналы детекторов</span><b>→</b><span>Анализ данных</span></div><p>Коллайдер и детектор — разные устройства. ATLAS и CMS — примеры детекторов на БАК. Они измеряют сигналы от продуктов столкновений; сам ускоритель обеспечивает пучки и условия для столкновения. [SRC14]</p>\n<h2>Что регистрирует детектор</h2><div class=\"table-wrap\"><table><thead><tr><th>Часть детектора</th><th>Её задача в общих чертах</th></tr></thead><tbody><tr><td>Трекер</td><td>Регистрирует точки прохождения заряженной частицы через чувствительные слои.</td></tr><tr><td>Электромагнитный калориметр</td><td>Измеряет энерговыделение, характерное для электронов и фотонов.</td></tr><tr><td>Адронный калориметр</td><td>Измеряет энерговыделение, связанное с адронами.</td></tr><tr><td>Мюонная система</td><td>Помогает выделить мюоны, прошедшие через внутренние слои установки.</td></tr></tbody></table></div><p>Тип частицы определяют по совокупности сигналов, а не по одному признаку. Нестабильную частицу часто исследуют по продуктам её распада. Именно так изучают бозон Хиггса: он не остаётся внутри детектора как объект для фотографии. [SRC8] [SRC5]</p><div class=\"callout\"><strong>Один необычный сигнал — ещё не открытие.</strong> Нужны многие события, сравнение с фоном и оценка неопределённостей. Детектор даёт данные, а физический вывод получают после их анализа.</div>\n<h2>СКИФ — другой способ использовать ускоритель</h2><figure class=\"science-photo\"><div class=\"photo-frame\"><img src=\"https://srf-skif.ru/images/thumb/2/23/Общий_вид_СКИФ.jpg/600px-Общий_вид_СКИФ.jpg\" alt=\"Общий вид комплекса СКИФ\" loading=\"lazy\" referrerpolicy=\"no-referrer\" onload=\"this.parentElement.classList.add('loaded')\" onerror=\"this.hidden=true;this.parentElement.classList.add('unavailable')\"><div class=\"photo-fallback\"><strong>Общий вид комплекса СКИФ</strong><span>Для загрузки фотографии нужен доступ к её источнику в интернете. Ссылка находится под изображением.</span></div></div><figcaption>[SRC16]</figcaption></figure>\n<p><strong>СКИФ</strong> — Сибирский кольцевой источник фотонов в Кольцово Новосибирской области. Он предназначен для получения яркого синхротронного излучения и исследования вещества. Это не протонный коллайдер и не установка с той же задачей, что БАК.</p><p>Электроны в накопительном кольце излучают при изменении направления движения в магнитном поле. Полученное излучение направляют на образец. По его рассеянию, поглощению и другим сигналам исследуют, например, атомную структуру кристалла или свойства материала. [SRC15] [SRC16]</p><div class=\"plain-flow\"><span>Электронный пучок</span><b>→</b><span>Синхротронное излучение</span><b>→</b><span>Образец</span><b>→</b><span>Детектор</span><b>→</b><span>Структура и свойства вещества</span></div>\n<div class=\"grid2 compare-installations\"><section><h3>БАК</h3><p><strong>Основная идея:</strong> столкнуть пучки и изучить продукты реакции.</p><p><strong>Пример вопроса:</strong> есть ли в данных признаки рождения новой частицы?</p></section><section><h3>СКИФ</h3><p><strong>Основная идея:</strong> получить излучение и исследовать образец.</p><p><strong>Пример вопроса:</strong> как расположены атомы в материале?</p></section></div><p class=\"source-note\">Назначение установок: [SRC14] [SRC15] [SRC16]. Фотографии загружаются из внешних источников; теория, схемы и задания работают без интернета.</p>",
+    "takeaway": "На БАК исследуют продукты столкновений пучков. В СКИФ используют синхротронное излучение для исследования вещества. Детектор регистрирует сигналы, а не готовый ответ."
+  }
+};
+
+// Ниже — общая логика сайта: навигация, ответы, прогресс и сертификат.
+const $ = (s, root=document) => root.querySelector(s);
+const $$ = (s, root=document) => Array.from(root.querySelectorAll(s));
+const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+// Learning-state version 3. The original v2 key is preserved for rollback.
+const STORAGE_KEY = 'hep-mini-course:' + CONFIG.courseId + ':v3';
+const LEGACY_STORAGE_KEY = 'hep-mini-course:' + CONFIG.courseId + ':v2';
+const PRACTICE_IDS = ['charge','decay','experiment','quarks','beta'];
+let storageAvailable = true;
+const defaults = () => ({version:3,diagnostic:{answers:{},result:null},checkpoints:{},checkpointAnswers:{},modules:[],practice:{answers:{},passed:[]},quiz:{answers:{},attempts:[],submitted:false},reflection:{clarity:'',insight:'',difficulty:'',saved:false},certificate:null,learnerName:'',legacy:null});
+function validAnswers(answers,questions){const out={};if(!answers||typeof answers!=='object')return out;for(const q of questions){const v=answers[q.id];if(Number.isInteger(v)&&v>=0&&v<q.options.length)out[q.id]=v;}return out;}
+function scoreAnswers(answers,questions=QUIZ){return questions.reduce((n,q)=>n+(answers[q.id]===q.answer?1:0),0);}
+function cleanRecord(r,total=QUIZ.length){if(!r||typeof r.name!=='string'||typeof r.id!=='string'||typeof r.date!=='string'||Number.isNaN(Date.parse(r.date)))return null;return {name:r.name.slice(0,80),id:r.id.slice(0,60),date:r.date,score:Math.min(total,Math.max(0,Number(r.score)||0))};}
+function cleanAttempts(attempts,questions){if(!Array.isArray(attempts))return [];return attempts.filter(a=>a&&typeof a.date==='string'&&!Number.isNaN(Date.parse(a.date))&&Object.keys(validAnswers(a.answers,questions)).length===questions.length).map(a=>({date:a.date,answers:validAnswers(a.answers,questions),score:scoreAnswers(validAnswers(a.answers,questions),questions)}));}
+function loadState(){
+ const out=defaults();try{
+  let raw=localStorage.getItem(STORAGE_KEY),migrating=false;
+  if(!raw){raw=localStorage.getItem(LEGACY_STORAGE_KEY);migrating=!!raw;}
+  if(!raw)return out;const data=JSON.parse(raw);if(!data||(!migrating&&data.version!==3)||(migrating&&data.version!==2))return out;
+  out.diagnostic.answers=validAnswers(data.diagnostic?.answers,DIAGNOSTIC);
+  if(data.diagnostic?.result&&Object.keys(out.diagnostic.answers).length===DIAGNOSTIC.length)out.diagnostic.result={score:scoreAnswers(out.diagnostic.answers,DIAGNOSTIC)};
+  if(migrating){if(data.checkpoints?.module3===true){out.checkpoints.module3=true;out.checkpointAnswers.module3=Object.fromEntries(CHECKPOINTS.module3.map(q=>[q.id,q.answer]));}}
+  else for(const [id,questions]of Object.entries(CHECKPOINTS)){out.checkpointAnswers[id]=validAnswers(data.checkpointAnswers?.[id],questions);if(data.checkpoints?.[id]===true&&scoreAnswers(out.checkpointAnswers[id],questions)===questions.length)out.checkpoints[id]=true;}
+  out.modules=Array.isArray(data.modules)?data.modules.filter((x,i,a)=>MODULES[x]&&out.checkpoints[x]&&a.indexOf(x)===i):[];
+  if(data.practice?.answers&&typeof data.practice.answers==='object')for(const[k,v]of Object.entries(data.practice.answers))if(typeof v==='string'&&v.length<300)out.practice.answers[k]=v;
+  const allowed=migrating?['charge','decay','experiment']:PRACTICE_IDS;out.practice.passed=Array.isArray(data.practice?.passed)?data.practice.passed.filter((x,i,a)=>allowed.includes(x)&&a.indexOf(x)===i):[];
+  if(!migrating){out.quiz.answers=validAnswers(data.quiz?.answers,QUIZ);out.quiz.attempts=cleanAttempts(data.quiz?.attempts,QUIZ);out.quiz.submitted=!!data.quiz?.submitted&&out.quiz.attempts.length>0;if(out.quiz.submitted)out.quiz.answers={...out.quiz.attempts.at(-1).answers};}
+  if(data.reflection&&typeof data.reflection==='object'){for(const k of ['clarity','insight','difficulty'])if(typeof data.reflection[k]==='string')out.reflection[k]=data.reflection[k].slice(0,3000);out.reflection.saved=!!data.reflection.saved&&['1','2','3','4','5'].includes(out.reflection.clarity)&&out.reflection.insight.trim().length>=10&&out.reflection.difficulty.trim().length>=3;}
+  out.learnerName=String(data.learnerName||data.certificate?.name||'').slice(0,80);
+  if(migrating){out.legacy={version:'0.2.1',total:10,attempts:cleanAttempts(data.quiz?.attempts,QUIZ.slice(0,10)),certificate:cleanRecord(data.certificate,10)};}
+  else{out.certificate=cleanRecord(data.certificate);if(data.legacy&&data.legacy.total===10)out.legacy={version:'0.2.1',total:10,attempts:cleanAttempts(data.legacy.attempts,QUIZ.slice(0,10)),certificate:cleanRecord(data.legacy.certificate,10)};}
+ }catch(err){if(!(err instanceof SyntaxError))storageAvailable=false;}return out;
+}
+let state=loadState();let toastTimer;
+function saveState(){try{localStorage.setItem(STORAGE_KEY,JSON.stringify(state));}catch(_){storageAvailable=false;}updateProgress();}
+function toast(message){$('#toast').textContent=message;clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('#toast').textContent='',4200);}
+function sourceLink(id){const src=SOURCES.find(x=>x.id===id);return src?`<a href="${escapeHTML(src.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHTML(src.title)}">[${id}]</a>`:'';}
+function expandSources(html){return html.replace(/\[SRC(\d+)\]/g,(_,n)=>sourceLink(Number(n)));}
+function sourcesInline(ids){return `<span class="source-note"> ${ids.map(sourceLink).join(' ')}</span>`;}
+function bestScore(){return state.quiz.attempts.reduce((n,a)=>Math.max(n,a.score),0);}
+function completionItems(){return [
+ {label:'Пройти входную диагностику (результат не влияет на допуск)',done:!!state.diagnostic.result,href:'intro'},
+ ...Object.keys(MODULES).map(id=>({label:'Завершить модуль «'+MODULES[id].title+'»',done:state.modules.includes(id),href:id})),
+ ...[['charge','рассчитать заряды адронов'],['decay','восстановить бета-распад'],['experiment','выбрать экспериментальную установку'],['quarks','разобрать состав и цвет мезона'],['beta','определить изменения A и Z']].map(([id,text])=>({label:'Практикум: '+text,done:state.practice.passed.includes(id),href:'practice'})),
+ {label:`Итоговый тест: не менее ${CONFIG.passScore} правильных ответов из ${QUIZ.length}`,done:bestScore()>=CONFIG.passScore,href:'quiz'},
+ {label:'Сохранить рефлексию слушателя',done:state.reflection.saved,href:'reflection'}];}
+
+function eligible(){return completionItems().every(x=>x.done);}
+function navDone(id){if(id==='intro')return !!state.diagnostic.result;if(MODULES[id])return state.modules.includes(id);if(id==='practice')return PRACTICE_IDS.every(x=>state.practice.passed.includes(x));if(id==='quiz')return bestScore()>=CONFIG.passScore;if(id==='reflection')return state.reflection.saved;if(id==='certificate')return !!state.certificate&&eligible();return false;}
+function currentRoute(){const r=location.hash.replace('#','');return NAV.some(x=>x[0]===r)?r:'home';}
+function renderNav(){const current=currentRoute();$('#side-nav').innerHTML=NAV.map(([id,name,index],i)=>`${i===1?'<div class="nav-label">Обучение</div>':''}${i===9?'<div class="nav-label">Материалы</div>':''}<a class="nav-link ${current===id?'active':''}" href="#${id}" ${current===id?'aria-current="page"':''}><span class="nav-index" aria-hidden="true">${index}</span><span>${name}</span>${navDone(id)?'<span class="nav-check" aria-label="Завершено">✓</span>':''}</a>`).join('');}
+function updateProgress(){const items=completionItems(),percent=Math.round(items.filter(x=>x.done).length/items.length*100);$('#overall-bar').value=percent;$('#overall-percent').textContent=percent+'%';$('#progress-count').textContent=items.filter(x=>x.done).length+' из '+items.length+' шагов';renderNav();$('#storage-warning').hidden=storageAvailable;}
+function footer(){return `<footer class="footer"><span>${escapeHTML(CONFIG.author||'Авторский учебный проект')} · Лабораторная № 8</span></footer>`;}
+function pageHeader(number,title,subtitle,time){return `<div class="page-intro"><div class="eyebrow">${number}${time?' <span class="icon-separator"> / </span> '+time:''}</div><h1>${title}</h1><p class="lead">${subtitle}</p></div>`;}
+function heroArt(){return `<div class="hero-art"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><g stroke="currentColor" stroke-width="3"><ellipse cx="50" cy="50" rx="42" ry="16"/><ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="42" ry="16" transform="rotate(120 50 50)"/></g><g fill="currentColor"><circle cx="50" cy="50" r="7"/><circle cx="90" cy="45" r="4"/><circle cx="26" cy="17" r="4"/><circle cx="27" cy="82" r="4"/></g></svg></div>`;}
+
+function renderHome(){return `<div class="page">${state.legacy&&!eligible()?'<div class="notice migration-note">Курс обновлён. Прежние результаты и рефлексия сохранены; старый тест доступен в отчёте отдельным разделом. Для нового сертификата повтори расширенные модули 1–2, выполни две новые задачи и тест из 12 вопросов.</div>':''}<section class="hero"><div><div class="eyebrow">Физика микромира · Мини-курс</div><h1>Физика<br>элементарных<br>частиц</h1><p class="lead">Кто такие фермионы и бозоны, чем отличаются четыре взаимодействия и зачем нужны ускорители. Разберёмся по порядку и закрепим материал в заданиях.</p><div class="pills"><span class="pill">Для студентов-физиков</span><span class="pill">≈ 60 минут</span><span class="pill violet">Именной сертификат</span></div><div class="actions"><a href="#intro" class="btn">${state.diagnostic.result?'Продолжить обучение':'Начать курс'} <span aria-hidden="true">→</span></a><a href="#practice" class="btn secondary">Посмотреть практику</a></div></div>${heroArt()}</section>
+ <section class="card"><h2 style="font-size:22px">Сначала разберём основные понятия</h2><div class="home-concepts"><a href="#module1"><strong>Фермионы</strong><span>Полуцелый спин. Например, электрон и протон.</span></a><a href="#module1"><strong>Бозоны</strong><span>Целый спин. Например, фотон и пион.</span></a><a href="#module1"><strong>Лептоны</strong><span>Элементарные фермионы без цветового заряда.</span></a><a href="#module1"><strong>Адроны</strong><span>Составные частицы с кварк-глюонной структурой.</span></a></div><p class="source-note">Как связаны эти группы? В первом модуле есть две схемы и примеры. ${sourcesInline([2,12])}</p></section><div class="section-heading"><h2>Программа курса</h2><span>От основных понятий к эксперименту</span></div><div class="grid3">${Object.entries(MODULES).map(([id,m])=>`<article class="card module-card"><div><span class="module-num">МОДУЛЬ ${m.number}</span><span class="module-time">${m.time}</span></div><h3>${m.title}</h3><p>${m.subtitle}</p><a class="btn ghost" href="#${id}">${state.modules.includes(id)?'Повторить материал':'Открыть модуль'} →</a></article>`).join('')}</div>
+ <section class="card"><div class="eyebrow">Результаты обучения</div><h2>После курса ты сможешь</h2><div class="outcomes"><div class="outcome"><b>01</b><span>Объяснять, чем отличаются фермионы, бозоны, лептоны и адроны.</span></div><div class="outcome"><b>02</b><span>Вычислять заряд адрона по его валентному кварковому составу.</span></div><div class="outcome"><b>03</b><span>Называть четыре взаимодействия и объяснять, какие входят в Стандартную модель.</span></div><div class="outcome"><b>04</b><span>Объяснять бета-распад и различать задачи БАК, детекторов и СКИФ.</span></div></div></section>
+ <div class="grid2"><section class="card"><h3>Что нужно знать заранее</h3><p class="small muted">Достаточно знать строение атома, электрический заряд и закон сохранения энергии. Остальные понятия вводятся в курсе. Сложных вычислений и квантовой теории поля здесь нет.</p></section><section class="card"><h3>Как получить сертификат</h3><p class="small muted">Пройди диагностику, три модуля и практикум, набери не менее ${CONFIG.passScore} из ${QUIZ.length} в итоговом тесте и сохрани рефлексию. Ограничений по времени и числу повторных попыток нет.</p></section></div>
+ <div class="home-note"><p><strong>Учись в своём темпе.</strong> Разделы открыты сразу. Ответы и отметки о прохождении сохраняются в этом браузере. На другом устройстве прогресс не появится автоматически.</p><a class="btn secondary compact" href="#certificate">Мой прогресс →</a></div>${footer()}</div>`;}
+function questionHTML(q,prefix,selected,checked=false){return `<fieldset class="question" data-question="${q.id}"><legend><span class="q-index">${q.topic?escapeHTML(q.topic):'Вопрос '+(Number(q.id.slice(1))||1)}</span>${q.text}</legend>${q.options.map((option,i)=>`<label class="option ${checked&&i===q.answer?'is-correct':''} ${checked&&selected===i&&i!==q.answer?'is-wrong':''}"><input type="radio" name="${prefix}-${q.id}" value="${i}" data-answer="${prefix}" data-qid="${q.id}" ${selected===i?'checked':''} ${checked?'disabled':''}><span>${option}</span></label>`).join('')}${checked?`<div class="feedback ${selected===q.answer?'ok':''}"><strong>${selected===q.answer?'Верно':'Нужно поправить ответ'}</strong>${q.explain}${sourcesInline(q.source)}</div>`:''}</fieldset>`;}
+function renderIntro(){return `<div class="page narrow">${pageHeader('Старт / 00','Что ты уже знаешь?','Три вопроса помогут обнаружить исходные представления. Любой результат позволяет продолжить обучение.','3 минуты')}<div class="card"><p class="small muted">Здесь нет проходного балла. Это диагностика, а не экзамен. После проверки откроются объяснения.</p><form id="diagnostic-form">${DIAGNOSTIC.map(q=>questionHTML(q,'diagnostic',state.diagnostic.answers[q.id],!!state.diagnostic.result)).join('')}<div class="alert" id="diagnostic-error" role="alert"></div>${state.diagnostic.result?`<div class="notice green"><strong>Результат: ${state.diagnostic.result.score} из 3.</strong> Даже если все ответы верны, обрати внимание на пояснения: в следующих модулях появятся схемы и задачи.</div><div class="actions"><a class="btn" href="#module1">К первому модулю →</a></div>`:'<button class="btn" type="submit">Проверить исходные знания</button>'}</form></div>${footer()}</div>`;}
+function renderModel(){return `<section class="card soft" aria-labelledby="model-title"><h3 id="model-title">Карта Стандартной модели</h3><p class="small muted">Нажми на карточку, чтобы увидеть пояснение. Заряд указан в единицах e; s — квантовое число спина. Античастицы отдельно не показаны, W⁺ и W⁻ объединены в одну карточку.</p><div class="model-grid"><div class="model-head">I поколение</div><div class="model-head">II поколение</div><div class="model-head">III поколение</div><div class="model-head">Калибровочные<br>бозоны</div><div class="model-head">Скаляр</div>${PARTICLES.map((p,i)=>p?`<button type="button" class="particle ${p.type}" data-action="particle" data-index="${i}" aria-pressed="${i===0}" aria-label="${escapeHTML(p.name)}, заряд ${p.charge} e, спин ${p.spin}"><span class="particle-charge">${p.charge}</span><span class="particle-symbol">${p.symbol}</span><span class="particle-name">${p.name}</span><span class="particle-meta">s = ${p.spin}</span></button>`:'<div aria-hidden="true"></div>').join('')}</div><div class="model-legend"><span><i class="dot"></i>Кварки</span><span><i class="dot purple"></i>Лептоны</span><span><i class="dot orange"></i>Калибровочные бозоны</span><span><i class="dot pink"></i>Скалярный бозон</span></div><div class="particle-detail" id="particle-detail" aria-live="polite"><h4>u — up-кварк</h4><p>${PARTICLES[0].detail}</p></div><div class="source-note">Схема составлена для курса по материалам ${[1,2,5,6,10].map(sourceLink).join(' ')}. Массы нейтрино выходят за пределы минимальной исходной модели.</div></section>`;}
+
+
+function checkpointHTML(id){const questions=CHECKPOINTS[id],answers=state.checkpointAnswers[id]||{};return `<section class="card"><div class="eyebrow">Проверка понимания</div><h2>${questions.length===1?'Один вопрос по модулю':questions.length+' вопроса по модулю'}</h2><p class="checkpoint-hint">Ответь на все вопросы и нажми «Проверить». Для завершения модуля нужны верные ответы на каждый вопрос; попытки не ограничены.</p><form id="checkpoint-form" data-module="${id}">${questions.map(q=>questionHTML(q,'checkpoint',answers[q.id],!!state.checkpoints[id])).join('')}<div id="checkpoint-feedback" class="checkpoint-summary" aria-live="polite"></div>${state.checkpoints[id]?'<p class="fine">✓ Все ответы верны. Модуль можно завершить.</p>':'<button type="submit" class="btn secondary">Проверить ответы</button>'}</form></section>`;}
+
+function renderModule(id){const m=MODULES[id];return `<div class="page narrow">${pageHeader('Модуль / '+m.number,m.title,m.subtitle,m.time)}<article class="card lesson-text">${expandSources(m.body).replace('[MODEL]',renderModel)}<div class="notice green"><strong>Главное из модуля.</strong> ${m.takeaway}</div></article>${checkpointHTML(id)}<div class="lesson-end"><p>${state.modules.includes(id)?'✓ Модуль завершён. К материалам можно вернуться в любой момент.':'Прочитай материал и правильно ответь на все вопросы выше. Затем отметь модуль как пройденный.'}</p><button type="button" class="btn" data-action="complete-module" data-module="${id}" ${!state.checkpoints[id]?'disabled':''}>${state.modules.includes(id)?'Дальше →':'Завершить модуль →'}</button></div>${footer()}</div>`;}
+function practiceStatus(id){return `<span class="status-tag ${state.practice.passed.includes(id)?'done':''}" id="status-${id}">${state.practice.passed.includes(id)?'✓ Засчитано':'Пока не выполнено'}</span>`;}
+function val(k){return escapeHTML(state.practice.answers[k]||'');}
+function practiceInput(k,label,unit){return `<div class="field"><label class="form-label" for="${k}">${label}</label><input type="text" inputmode="decimal" id="${k}" name="${k}" data-practice-field="${k}" value="${val(k)}" autocomplete="off" maxlength="30"><div class="input-unit">${unit}</div></div>`;}
+const PRACTICE_SOLUTIONS = {"charge": "<p>Протон: 2/3 + 2/3 − 1/3 = <strong>1</strong>. Нейтрон: 2/3 − 1/3 − 1/3 = <strong>0</strong>. Пион π⁺: 2/3 + 1/3 = <strong>1</strong>.</p><p>У антикварка d̅ заряд противоположен заряду d-кварка. Получены безразмерные значения Q/e.</p>", "decay": "<div class=\"formula nuclear-equation\"><span class=\"nuclide\" role=\"math\" aria-label=\"n: верхний индекс 1, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">n</span></span> → <span class=\"nuclide\" role=\"math\" aria-label=\"p: верхний индекс 1, нижний индекс 1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>1</span><span>1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">p</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"e: верхний индекс 0, нижний индекс −1\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>−1</span></span><span class=\"nu-symbol\" aria-hidden=\"true\">e</span></span> + <span class=\"nuclide\" role=\"math\" aria-label=\"&lt;span class=&quot;antibar&quot;&gt;ν&lt;/span&gt;&lt;sub&gt;e&lt;/sub&gt;: верхний индекс 0, нижний индекс 0\"><span class=\"nu-indices\" aria-hidden=\"true\"><span>0</span><span>0</span></span><span class=\"nu-symbol\" aria-hidden=\"true\"><span class=\"antibar\">ν</span><sub>e</sub></span></span></div><p>Недостающая частица — электронное антинейтрино. Нуклоны: 1 = 1 + 0 + 0. Электрический заряд: 0 = 1 − 1 + 0. Лептонное число: 0 = 0 + 1 − 1.</p>", "experiment": "<p>Задача 1: <strong>БАК</strong>. Задачи 2 и 3: <strong>СКИФ</strong>. В БАК изучают продукты столкновений пучков. В СКИФ излучение используют для исследования образца. Различие определяется задачей эксперимента, а не только формой или размером установки.</p>", "quarks": "<p>Отрицательный пион: <strong>π⁻ = dū</strong>. Заряд: Q/e = −1/3 − 2/3 = <strong>−1</strong>. На условном рисунке к красному d-кварку выбирают <strong>антикрасный</strong> ū.</p><p>Это лишь одно цветовое сочетание. Реальный бесцветный мезон описывается суперпозицией пар «цвет — антицвет». Цветовой заряд не меняет вычисленный электрический заряд.</p>", "beta": "<p><strong>β⁻:</strong> ΔA = 0, ΔZ = +1. <strong>β⁺:</strong> ΔA = 0, ΔZ = −1. <strong>Электронный захват:</strong> ΔA = 0, ΔZ = −1.</p><p>Число нуклонов сохраняется во всех трёх случаях. В β⁻-распаде нейтрон становится протоном; в двух других процессах протон становится нейтроном. Эти правила не заменяют проверки энергетической разрешённости конкретного перехода.</p>"};
+
+function solutionHTML(id,open=false){if(!state.practice.passed.includes(id))return '<p class="locked-solution">Подробное решение откроется после правильного выполнения этой задачи.</p>';return `<details ${open?'open':''}><summary>Разбор выполненной задачи</summary><div class="details-body">${PRACTICE_SOLUTIONS[id]}</div></details>`;}
+function choiceField(id,label,options){return `<div class="field"><label class="form-label" for="${id}">${label}</label><select id="${id}" data-practice-field="${id}"><option value="">Выбери ответ</option>${options.map(([value,text])=>`<option value="${value}" ${val(id)===value?'selected':''}>${text}</option>`).join('')}</select></div>`;}
+
+function renderPractice(){return `<div class="page narrow">${pageHeader('Практикум / 04','Применяем физику','Пять задач: состав частиц, бета-превращения и эксперимент.','10 минут')}<div class="notice">Ошибки не отнимают баллы. При неверном ответе появится подсказка без готового решения. Подробный разбор каждой задачи открывается только после её правильного выполнения. Для зачёта нужны все пять задач.</div>
+<section class="card"><div class="practical-heading"><div class="eyebrow">Задача / 01</div>${practiceStatus('charge')}</div><h2>Электрический заряд адронов</h2><p>Определи электрические заряды протона, нейтрона и положительного пиона в единицах e.</p><div class="given"><p><strong>Дано:</strong><br>Q<sub>u</sub>/e = +2/3; Q<sub>d</sub>/e = −1/3.<br>У антикварка электрический заряд противоположен заряду соответствующего кварка.</p></div><form id="charge-form"><div class="input-row">${practiceInput('qp','Протон: uud','Qp / e')}${practiceInput('qn','Нейтрон: udd','Qn / e')}${practiceInput('qpi','Пион π⁺: u d̅','Qπ / e')}</div><div id="charge-feedback" aria-live="polite"></div><button class="btn" type="submit">Проверить три заряда</button></form><div id="solution-charge" class="solution-area">${solutionHTML('charge')}</div></section>
+<section class="card"><div class="practical-heading"><div class="eyebrow">Задача / 02</div>${practiceStatus('decay')}</div><h2>Бета-распад нейтрона</h2><p>Восстанови β⁻-распад свободного нейтрона. Выбери недостающую частицу и объяснение, которое отличает её от другого нейтрального лептона.</p><div class="formula nuclear-equation"><span class="nuclide" role="math" aria-label="n: верхний индекс 1, нижний индекс 0"><span class="nu-indices" aria-hidden="true"><span>1</span><span>0</span></span><span class="nu-symbol" aria-hidden="true">n</span></span> → <span class="nuclide" role="math" aria-label="p: верхний индекс 1, нижний индекс 1"><span class="nu-indices" aria-hidden="true"><span>1</span><span>1</span></span><span class="nu-symbol" aria-hidden="true">p</span></span> + <span class="nuclide" role="math" aria-label="e: верхний индекс 0, нижний индекс −1"><span class="nu-indices" aria-hidden="true"><span>0</span><span>−1</span></span><span class="nu-symbol" aria-hidden="true">e</span></span> + ?</div><form id="decay-form">${choiceField('decay-particle','Недостающая частица',[['neutrino','Электронное нейтрино νₑ'],['antineutrino','Электронное антинейтрино ν̅ₑ'],['positron','Позитрон e⁺'],['photon','Фотон γ']])}${choiceField('decay-reason','Почему именно она?',[['charge','Только она имеет нулевой электрический заряд'],['lepton','Её L = −1 компенсирует L = +1 у электрона'],['mass','Её масса должна равняться массе нейтрона']])}<div id="decay-feedback" aria-live="polite"></div><button class="btn" type="submit">Проверить реакцию</button></form><div id="solution-decay" class="solution-area">${solutionHTML('decay')}</div></section>
+<section class="card"><div class="practical-heading"><div class="eyebrow">Задача / 03</div>${practiceStatus('experiment')}</div><h2>Выбор экспериментальной установки</h2><p>Выбери установку для каждой исследовательской задачи и объясни различие между ними.</p><form id="experiment-form">${[
+['exp-particle','1. Исследовать рождение тяжёлых частиц в столкновениях протонных пучков.'],['exp-crystal','2. Определить расположение атомов в кристалле по рассеянию рентгеновского излучения.'],['exp-material','3. Исследовать изменения структуры материала при нагревании с помощью синхротронного излучения.']].map(([id,label])=>choiceField(id,label,[['lhc','БАК — Большой адронный коллайдер'],['skif','СКИФ — источник синхротронного излучения']])).join('')}${choiceField('exp-reason','В чём основная разница?',[['size','Только в размере: обе установки сталкивают протоны'],['purpose','БАК сталкивает пучки; СКИФ даёт излучение для исследования образцов'],['photo','БАК фотографирует кварки, а СКИФ — электроны в атомах']])}<div id="experiment-feedback" aria-live="polite"></div><button class="btn" type="submit">Проверить выбор</button></form><div id="solution-experiment" class="solution-area">${solutionHTML('experiment')}</div></section>
+<section class="card"><div class="practical-heading"><div class="eyebrow">Задача / 04</div>${practiceStatus('quarks')}</div><h2>Кварковый состав и цвет мезона</h2><p>Отрицательный пион π⁻ содержит валентный d-кварк и один антикварк. Определи партнёра, заряд пиона и подходящий антицвет для условной схемы.</p><div class="given"><strong>Дано:</strong><br>Q<sub>u</sub>/e = +2/3; Q<sub>d</sub>/e = −1/3.<br>На схеме выбран красный d-кварк. Требуется показать одну пару «цвет — соответствующий антицвет» бесцветного мезона.</div><form id="quarks-form">${choiceField('pion-partner','Какой антикварк нужен?',[['anti-d','d̅ — анти-d-кварк'],['anti-u','ū — анти-u-кварк'],['anti-s','s̅ — анти-s-кварк']])}${practiceInput('qpiminus','Электрический заряд π⁻ в единицах e','Qπ⁻ / e')}${choiceField('color-partner','Какой антицвет выбрать для партнёра на схеме?',[['antigreen','Антизелёный'],['antiblue','Антисиний'],['antired','Антикрасный']])}<div id="quarks-feedback" aria-live="polite"></div><button class="btn" type="submit">Проверить состав и заряд</button></form><div id="solution-quarks" class="solution-area">${solutionHTML('quarks')}</div></section>
+<section class="card"><div class="practical-heading"><div class="eyebrow">Задача / 05</div>${practiceStatus('beta')}</div><h2>Массовое и зарядовое числа</h2><p>Для каждого процесса укажи изменения массового и зарядового чисел дочернего ядра: ΔA = A<sub>после</sub> − A<sub>до</sub>, ΔZ = Z<sub>после</sub> − Z<sub>до</sub>.</p><p class="small muted">Вводи числа, например 0, +1 или −1. Здесь проверяется правило изменения состава ядра, а не возможность распада конкретного изотопа.</p><form id="beta-form"><div class="decay-inputs">${[['minus','β⁻-распад'],['plus','β⁺-распад'],['capture','Электронный захват']].map(([key,title])=>`<section><h3>${title}</h3>${practiceInput('beta-'+key+'-a','Изменение ΔA','Число нуклонов')}${practiceInput('beta-'+key+'-z','Изменение ΔZ','Число протонов')}</section>`).join('')}</div><div id="beta-feedback" aria-live="polite"></div><button class="btn" type="submit">Проверить изменения</button></form><div id="solution-beta" class="solution-area">${solutionHTML('beta')}</div></section>
+<div class="actions"><a href="#quiz" class="btn">К итоговому тесту →</a><a href="#module1" class="btn secondary">Повторить теорию</a></div>${footer()}</div>`;}
+
+function renderQuiz(){const last=state.quiz.attempts.at(-1),submitted=state.quiz.submitted;return `<div class="page narrow">${pageHeader('Проверка / 05','Итоговый тест',`${QUIZ.length} вопросов, один правильный ответ в каждом. За верный ответ — 1 балл. Проходной результат — ${CONFIG.passScore} из ${QUIZ.length}.`,'8 минут')}<div class="card"><div class="quiz-toolbar"><p>Попыток завершено: ${state.quiz.attempts.length}. Лучший результат: ${state.quiz.attempts.length?bestScore()+'/'+QUIZ.length:'пока нет'}.</p><span class="count-badge" id="quiz-count">${Object.keys(state.quiz.answers).length}/${QUIZ.length} ответов</span></div>${submitted?`<div class="result-panel"><div class="score-number ${last.score<CONFIG.passScore?'fail':''}">${last.score}/${QUIZ.length}</div><div><h3>${last.score>=CONFIG.passScore?'Тест пройден':'Есть темы для повторения'}</h3><p>Ниже — разбор каждого вопроса. Для зачёта учитывается лучший результат; повторные попытки не ограничены.</p></div></div><div class="actions"><button type="button" class="btn secondary" data-action="retry-quiz">Новая попытка</button><a class="btn" href="#reflection">К рефлексии →</a></div><hr style="border:0;border-top:1px solid var(--line);margin:28px 0">`:'<p class="small muted">Ответы сохраняются при переходе между разделами. Разбор появится после отправки всего теста.</p>'}<form id="quiz-form">${QUIZ.map((q,i)=>`<div id="question-${q.id}" class="scroll-top"><div class="eyebrow">Вопрос ${i+1} / ${QUIZ.length}</div>${questionHTML(q,'quiz',state.quiz.answers[q.id],submitted)}</div>`).join('')}<div class="alert" id="quiz-error" role="alert"></div>${submitted?'':'<button class="btn" type="submit">Завершить тест и увидеть разбор</button>'}</form></div>${footer()}</div>`;}
+
+function renderReflection(){const r=state.reflection;return `<div class="page narrow">${pageHeader('Обратная связь / 06','Что стало понятнее?','Рефлексия нужна не для проверки «правильных мыслей», а для фиксации результата и оставшихся вопросов.','3 минуты')}<section class="card"><div class="notice">Ответы остаются только в этом браузере. Они <strong>не отправляются автору автоматически</strong>. После сохранения можно скачать отчёт и передать его самостоятельно.</div><form id="reflection-form"><div class="field"><label class="form-label" for="clarity">Насколько понятным был материал?</label><select id="clarity" data-reflection="clarity"><option value="">Выбери оценку</option>${['Почти ничего не понял(а)','Многое осталось непонятным','Понял(а) основные идеи','Почти всё понятно','Всё понятно, могу объяснить другому'].map((text,i)=>`<option value="${i+1}" ${r.clarity===String(i+1)?'selected':''}>${i+1} — ${text}</option>`).join('')}</select></div><div class="field"><label class="form-label" for="insight">Какую идею ты теперь можешь объяснить или применить?</label><textarea id="insight" data-reflection="insight" maxlength="3000" placeholder="Например, почему протон одновременно является адроном и фермионом.">${escapeHTML(r.insight)}</textarea><p class="fine">Не менее 10 символов. Содержание автоматически не оценивается.</p></div><div class="field"><label class="form-label" for="difficulty">Что вызвало трудности или что хотелось бы изучить дальше?</label><textarea id="difficulty" data-reflection="difficulty" maxlength="3000" placeholder="Можно написать, что трудностей не было, и назвать следующий интересующий вопрос.">${escapeHTML(r.difficulty)}</textarea><p class="fine">Не менее 3 символов.</p></div><div id="reflection-feedback" aria-live="polite">${r.saved?'<div class="feedback ok"><strong>Рефлексия сохранена.</strong> Данные хранятся локально.</div>':''}</div><div class="actions"><button class="btn" type="submit">Сохранить рефлексию</button><button class="btn secondary" type="button" data-action="download-report">Скачать отчёт — HTML</button><button class="btn secondary" type="button" data-action="download-report-txt">Скачать TXT</button></div></form><p class="report-note">HTML открывается в браузере и сохраняет оформление. TXT записывается в UTF-8 с сигнатурой кодировки. При отправке через мессенджер лучше скачивать файл, а не полагаться на его предпросмотр.</p></section><div class="actions"><a class="btn teal" href="#certificate">К сертификату →</a></div>${footer()}</div>`;}
+function displayDate(iso){return new Intl.DateTimeFormat('ru-RU',{day:'2-digit',month:'2-digit',year:'numeric'}).format(new Date(iso));}
+function courseURL(){if(CONFIG.courseUrl)return CONFIG.courseUrl;return /^https?:$/.test(location.protocol)?location.href.split('#')[0].split('?')[0]:'Локальная версия курса';}
+function sealSVG(suffix='screen'){
+ return SEAL_SVG.replaceAll('sealTop','sealTop-'+suffix).replaceAll('sealBottom','sealBottom-'+suffix);
+}
+function certificateHTML(record,preview=false,suffix='screen'){
+ const author=CONFIG.author||'Aminochka-Physicist';
+ return `<div class="certificate-paper">${preview?'<span class="cert-preview-tag">ОБРАЗЕЦ</span>':''}
+ <div class="cert-top"><div class="cert-top-left"><span class="brand-mark" aria-hidden="true">${ATOM_SVG}</span><span>Aminochka-Physicist<br>Авторский мини-курс</span></div><span>Учебный проект</span></div>
+ <div class="cert-core"><div class="cert-eyebrow">За любознательность и успешное прохождение</div><h2>СЕРТИФИКАТ</h2><p>Этот сертификат получает</p><div class="cert-name">${escapeHTML(record.name)}</div><p>за прохождение мини-курса</p><div class="cert-title">«Физика элементарных частиц»</div><div class="cert-meta"><div>Результат теста<strong>${record.score} из ${QUIZ.length} · ${Math.round(record.score/QUIZ.length*100)}%</strong></div><div>Дата<strong>${displayDate(record.date)}</strong></div></div></div>
+ <div><div class="cert-bottom"><div>Автор курса<b>${escapeHTML(author)}</b>${CONFIG.organization?`<span>${escapeHTML(CONFIG.organization)}</span>`:''}</div><span class="cert-stamp">${sealSVG(suffix)}</span><div class="cert-id">Номер на память<b>${escapeHTML(record.id)}</b><span class="cert-url">${escapeHTML(courseURL())}</span></div></div>
+ <div class="cert-disclaimer"><strong>Шуточный авторский сертификат. Не является действительным документом об образовании или квалификации.</strong><br>Печать декоративная. Результат сформирован в браузере; официальной проверки подлинности нет.</div></div></div>`;
+}
+
+function renderCertificate(){const allowed=eligible(),record=allowed?state.certificate:null;const sample={name:'Имя Фамилия',score:CONFIG.passScore,date:new Date().toISOString(),id:'ОБРАЗЕЦ · НЕ ВЫДАН'};return `<div class="page narrow">${pageHeader('Результат / ◇','Твой сертификат','Небольшой сувенир после прохождения курса: твоё имя, результат и фирменная печать с атомом. Можно сохранить в PNG или распечатать в PDF.')}<section class="card"><h3>${allowed?'Все учебные условия выполнены':'Что осталось пройти'}</h3><ul class="checklist">${completionItems().map(x=>`<li><span class="check-icon ${x.done?'':'pending'}">${x.done?'✓':'○'}</span><span>${x.label}${x.done?'':` · <a href="#${x.href}">Открыть</a>`}</span></li>`).join('')}</ul><form id="certificate-form"><div class="field"><label class="form-label" for="learner-name">Имя и фамилия для сертификата</label><input type="text" id="learner-name" name="learner-name" autocomplete="name" maxlength="80" value="${escapeHTML(record?.name||state.learnerName||'')}" placeholder="Например: Александра Иванова" ${allowed?'':'disabled'}><p class="fine">Имя записывается только в локальный сертификат и хранилище браузера. Проверки личности нет.</p></div><div id="certificate-feedback" aria-live="polite"></div><button type="submit" class="btn" ${allowed?'':'disabled'}>${record?'Обновить сертификат':'Сформировать сертификат'}</button></form></section><div id="certificate-preview">${certificateHTML(record||sample,!record)}</div>${record?'<div class="actions"><button type="button" class="btn" data-action="print-certificate">Печать / сохранить PDF</button><button type="button" class="btn secondary" data-action="png-certificate">Скачать PNG</button><button type="button" class="btn secondary" data-action="download-report">Отчёт о прохождении</button></div><p class="fine" style="margin-top:14px">В окне печати выбери «Сохранить как PDF», формат A4, альбомную ориентацию, без полей и без браузерных колонтитулов. Для цветного оформления включи печать фона.</p>':'<p class="fine" style="margin-top:15px">Выше показан образец оформления, а не выданный документ. Дата в образце — текущая дата устройства.</p>'}<div class="notice gold"><strong>Что подтверждает сертификат.</strong> Выполнение учебных условий в этом браузере, без удостоверения личности. Сертификат шуточный, а печать декоративная. Это не диплом и не документ об образовании или квалификации. Идентификатор не связан с публичным реестром.</div>${footer()}</div>`;}
+function renderResources(){return `<div class="page narrow">${pageHeader('Библиотека','Источники и словарь','Материал курса — самостоятельное изложение. Ссылки ведут к первичным образовательным и справочным ресурсам; организации-источники не являются авторами или партнёрами этого курса.')}<section class="card"><h2>Для проверки и продолжения изучения</h2>${SOURCES.map(s=>`<div class="ref-row"><a href="${s.url}" target="_blank" rel="noopener noreferrer">[${s.id}] ${s.title} ↗</a><small>${s.note}</small></div>`).join('')}<p class="fine">Новые материалы о кварках, пионах и бета-превращениях добавлены в октябре 2026 года. Теория, схемы, тесты и сертификат работают без интернета. Для внешних фотографий и ссылок нужна сеть.</p></section><section class="card"><h2>Короткий словарь</h2>${GLOSSARY.map(([word,definition])=>`<details><summary>${word}</summary><div class="details-body">${definition}</div></details>`).join('')}<p class="source-note">Терминология: ${[1,2,3,4,8,10,12,15,16].map(sourceLink).join(' ')}.</p></section><section class="card"><h3>Куда двигаться дальше</h3><p>После мини-курса можно подробнее изучить кварковую модель адронов, физику нейтрино или устройство детекторов и синхротронных источников. Это дальнейшие темы, а не дополнительное условие получения сертификата.</p></section>${footer()}</div>`;}
+function renderAbout(){return `<div class="page narrow">${pageHeader('О проекте','О курсе','Авторский учебный мини-курс Aminochka-Physicist.')}<section class="card"><h2>Как появился этот курс</h2><p>Мини-курс «Физика элементарных частиц» придуман студенткой первого курса магистратуры СибГУ имени Решетнёва, группа <strong>МФП26-01</strong>.</p><p>Проект создан в рамках <strong>лабораторной работы № 8</strong> по дисциплине <strong>«Информационно-коммуникационные технологии в научной среде»</strong>.</p><dl class="about-facts"><dt>Название сайта</dt><dd>Aminochka-Physicist</dd><dt>Аудитория</dt><dd>Студенты-физики, знакомые со строением атома и электрическим зарядом</dd><dt>Цель</dt><dd>Разобраться в классификации частиц, кварках, четырёх взаимодействиях и бета-превращениях; познакомиться с экспериментальными установками</dd><dt>Формат</dt><dd>Теория и схемы, пять практических задач, итоговый тест из ${QUIZ.length} вопросов, рефлексия и шуточный сертификат</dd></dl></section><section class="card"><h2>Как пользоваться</h2><p>Курс рассчитан примерно на 60 минут при знакомстве с базовыми понятиями. Разделы открыты сразу; дополнительные пояснения можно читать в своём темпе. Более подробное изучение и повторные попытки потребуют дополнительного времени.</p><p>Ответы и прогресс хранятся в этом браузере и автоматически не передаются автору. Отчёт можно скачать в HTML или TXT. Фотографии и внешние ссылки требуют подключения к интернету.</p><p>Сертификат — шуточный авторский сувенир, не документ об образовании или квалификации. Материалы организаций, указанных в источниках, использованы как учебные и справочные ресурсы; это не означает их участия в проекте.</p></section>${footer()}</div>`;}
+function render(){const route=currentRoute();let html;if(route==='home')html=renderHome();else if(route==='intro')html=renderIntro();else if(MODULES[route])html=renderModule(route);else if(route==='practice')html=renderPractice();else if(route==='quiz')html=renderQuiz();else if(route==='reflection')html=renderReflection();else if(route==='certificate')html=renderCertificate();else if(route==='resources')html=renderResources();else if(route==='about')html=renderAbout();else html=renderHome();$('#main').innerHTML=html;document.title=(NAV.find(x=>x[0]===route)?.[1]||'Мини-курс')+' · Aminochka-Physicist';updateProgress();$('#sidebar').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');}
+function numeric(value){const normalized=String(value).trim().replace(/−/g,'-').replace(',','.');return /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)$/.test(normalized)?Number(normalized):NaN;}
+function showFeedback(id,ok,title,body){const el=$('#'+id);if(el)el.innerHTML=`<div class="feedback ${ok?'ok':''}"><strong>${title}</strong>${body}</div>`;}
+function markPractice(id){if(!state.practice.passed.includes(id))state.practice.passed.push(id);saveState();const el=$('#status-'+id);if(el){el.textContent='✓ Засчитано';el.classList.add('done');}const area=$('#solution-'+id);if(area)area.innerHTML=solutionHTML(id,true);}
+
+function downloadBlob(blob,filename){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+function downloadText(text,filename,type='text/plain;charset=utf-8'){downloadBlob(new Blob(['\uFEFF',text.replace(/\r?\n/g,'\r\n')],{type}),filename);}
+
+function reportText(){const items=completionItems(),old=state.legacy,oldBest=old?.attempts.reduce((v,a)=>Math.max(v,a.score),0)||0;return `ОТЧЁТ О ПРОХОЖДЕНИИ МИНИ-КУРСА
+${CONFIG.title}
+Версия: ${CONFIG.version}
+Адрес: ${courseURL()}
+Сформирован: ${new Date().toLocaleString('ru-RU')}
+Имя: ${state.certificate?.name||state.learnerName||'не указано'}
+Автор курса: ${CONFIG.author||'не указан'}
+
+ПРОГРЕСС
+${items.map(x=>(x.done?'[x]':'[ ]')+' '+x.label).join('\n')}
+
+ДИАГНОСТИКА
+${state.diagnostic.result?state.diagnostic.result.score+' из '+DIAGNOSTIC.length:'не завершена'}
+
+ИТОГОВЫЙ ТЕСТ ТЕКУЩЕЙ ВЕРСИИ
+${state.quiz.attempts.length?'Лучший результат: '+bestScore()+' из '+QUIZ.length:'Пока не пройден'}
+Проходной результат: ${CONFIG.passScore} из ${QUIZ.length}
+Попытки:
+${state.quiz.attempts.map((a,i)=>`${i+1}. ${new Date(a.date).toLocaleString('ru-RU')} — ${a.score}/${QUIZ.length}`).join('\n')||'нет'}
+${old?`\nПРЕДЫДУЩАЯ ВЕРСИЯ КУРСА (${old.version})\n${old.attempts.length?'Лучший результат: '+oldBest+' из '+old.total:'Завершённых попыток нет'}\n${old.attempts.map((a,i)=>`${i+1}. ${new Date(a.date).toLocaleString('ru-RU')} — ${a.score}/${old.total}`).join('\n')}\nЭти результаты сохранены отдельно и не засчитываются как прохождение нового теста из ${QUIZ.length} вопросов.\n`:''}
+РЕФЛЕКСИЯ СЛУШАТЕЛЯ
+Статус: ${state.reflection.saved?'сохранена':'черновик / не заполнена'}
+Понятность: ${state.reflection.clarity||'не выбрана'}/5
+Что стало понятно:
+${state.reflection.insight||'не заполнено'}
+Трудности / дальнейшие вопросы:
+${state.reflection.difficulty||'не заполнено'}
+
+СЕРТИФИКАТ
+${state.certificate?'Идентификатор: '+state.certificate.id+'\nДата: '+displayDate(state.certificate.date):'В текущей версии не сформирован'}
+
+Этот отчёт сформирован локально и не является защищённым подтверждением личности, результата или даты. Данные не переданы автору автоматически.
+`;}
+
+
+function reportHTML(){const title='Отчёт о прохождении мини-курса';return '<!doctype html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>'+title+'</title><style>body{font:16px/1.65 Arial,sans-serif;color:#182438;background:#f4f7fb;margin:0;padding:28px}main{max-width:860px;margin:auto;padding:34px;background:white;border:1px solid #dce4ef;border-radius:14px}h1{font-size:25px;line-height:1.3}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:15px/1.7 Arial,sans-serif;margin:24px 0}.note{font-size:12px;color:#5f6c80}@media(max-width:600px){body{padding:12px}main{padding:20px}}@media print{body{background:white;padding:0}main{padding:0;border:0;max-width:none}}</style></head><body><main><h1>'+title+'</h1><p class="note">Aminochka-Physicist · Учебный отчёт. Этот файл не отправляет данные в интернет.</p><pre>'+escapeHTML(reportText())+'</pre></main></body></html>';}
+function downloadReportHTML(){downloadBlob(new Blob(['﻿',reportHTML()],{type:'text/html;charset=utf-8'}),'Мой_результат_мини-курса.html');}
+
+function newID(){let random;try{const bytes=new Uint8Array(4);crypto.getRandomValues(bytes);random=Array.from(bytes,b=>b.toString(16).padStart(2,'0')).join('').toUpperCase();}catch(_){random=Math.random().toString(16).slice(2,10).toUpperCase();}return 'HEP-'+new Date().toISOString().slice(0,10).replaceAll('-','')+'-'+random;}
+function printCertificate(){if(!eligible()||!state.certificate){toast('Сначала выполни условия и сформируй сертификат.');return;}let area=$('#print-area');if(!area){area=document.createElement('div');area.id='print-area';area.className='print-area';document.body.appendChild(area);}area.innerHTML=certificateHTML(state.certificate,false,'print');document.body.classList.add('printing-certificate');window.print();}
+window.addEventListener('afterprint',()=>document.body.classList.remove('printing-certificate'));
+function canvasWrap(ctx,text,x,y,maxWidth,lineHeight){const words=text.split(/\s+/),lines=[];let line='';for(const word of words){const candidate=line?line+' '+word:word;if(ctx.measureText(candidate).width>maxWidth&&line){lines.push(line);line=word;}else line=candidate;}if(line)lines.push(line);for(const l of lines){ctx.fillText(l,x,y);y+=lineHeight;}return y;}
+async function downloadCertificatePNG(){
+ if(!eligible()||!state.certificate){toast('Сначала сформируй сертификат.');return;}
+ const r=state.certificate,canvas=document.createElement('canvas');canvas.width=1782;canvas.height=1260;
+ const c=canvas.getContext('2d');if(!c){toast('Не удалось создать PNG. Используй печать в PDF.');return;}
+ c.fillStyle='#ffffff';c.fillRect(0,0,1782,1260);c.strokeStyle='#c6d2e2';c.lineWidth=2;c.strokeRect(55,55,1672,1150);
+ const imageFromSVG=svg=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>resolve(im);im.onerror=reject;im.src='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);});
+ try{
+ const [logo,stamp]=await Promise.all([imageFromSVG(ATOM_SVG.replaceAll('currentColor','#45628a')),imageFromSVG(SEAL_SVG.replaceAll('currentColor','#45628a'))]);
+ c.drawImage(logo,105,95,65,65);c.textAlign='left';c.fillStyle='#45628a';c.font='bold 25px Arial';c.fillText('Aminochka-Physicist',190,125);c.fillStyle='#68778b';c.font='20px Arial';c.fillText('Авторский мини-курс · Учебный проект',190,158);
+ c.textAlign='center';c.fillStyle='#68778b';c.font='23px Arial';c.fillText('ЗА ЛЮБОЗНАТЕЛЬНОСТЬ И УСПЕШНОЕ ПРОХОЖДЕНИЕ',891,275);
+ c.fillStyle='#304d73';c.font='78px Georgia';c.fillText('СЕРТИФИКАТ',891,385);c.fillStyle='#68778b';c.font='26px Arial';c.fillText('Этот сертификат получает',891,457);
+ let fs=58;do{c.font=`bold ${fs}px Arial`;if(c.measureText(r.name).width<1500)break;fs-=1;}while(fs>12);c.fillStyle='#182438';c.fillText(r.name,891,552,1500);
+ c.fillStyle='#68778b';c.font='26px Arial';c.fillText('за прохождение мини-курса',891,622);c.fillStyle='#182438';c.font='bold 40px Arial';c.fillText('«Физика элементарных частиц»',891,692);
+ [['РЕЗУЛЬТАТ ТЕСТА',`${r.score} из ${QUIZ.length} · ${Math.round(r.score/QUIZ.length*100)}%`],['ДАТА',displayDate(r.date)]].forEach(([a,b],i)=>{const x=630+i*520;c.fillStyle='#68778b';c.font='20px Arial';c.fillText(a,x,775);c.fillStyle='#182438';c.font='bold 28px Arial';c.fillText(b,x,820);});
+ c.strokeStyle='#dce3ed';c.beginPath();c.moveTo(110,875);c.lineTo(1672,875);c.stroke();
+ c.save();c.translate(891,994);c.rotate(-9*Math.PI/180);c.drawImage(stamp,-105,-105,210,210);c.restore();
+ c.textAlign='left';c.fillStyle='#68778b';c.font='20px Arial';c.fillText('Автор курса',115,941);c.fillStyle='#182438';c.font='bold 25px Arial';canvasWrap(c,CONFIG.author||'Aminochka-Physicist',115,983,620,30);c.fillStyle='#68778b';c.font='18px Arial';if(CONFIG.organization)canvasWrap(c,CONFIG.organization,115,1055,620,24);
+ c.textAlign='right';c.font='20px Arial';c.fillText('Номер на память',1667,941);c.fillStyle='#182438';c.font='bold 24px Arial';c.fillText(r.id,1667,983,600);c.fillStyle='#68778b';c.font='17px Arial';c.fillText(courseURL(),1667,1021,610);
+ c.textAlign='center';c.font='bold 18px Arial';c.fillText('Шуточный авторский сертификат. Не является действительным документом об образовании или квалификации.',891,1143,1510);c.font='17px Arial';c.fillText('Печать декоративная. Результат сформирован в браузере; официальной проверки подлинности нет.',891,1175,1510);
+ canvas.toBlob(blob=>{if(blob)downloadBlob(blob,`certificate-${r.id}.png`);else toast('Не удалось сохранить PNG. Используй печать в PDF.');},'image/png');
+ }catch(_){toast('Не удалось создать изображение печати. Используй печать в PDF.');}
+}
+
+
+
+document.addEventListener('input',event=>{const t=event.target;if(t.matches('[data-answer]')){const prefix=t.dataset.answer,id=t.dataset.qid;if(prefix==='diagnostic'&&!state.diagnostic.result)state.diagnostic.answers[id]=Number(t.value);else if(prefix==='quiz'&&!state.quiz.submitted){state.quiz.answers[id]=Number(t.value);if($('#quiz-count'))$('#quiz-count').textContent=Object.keys(state.quiz.answers).length+'/'+QUIZ.length+' ответов';}else if(prefix==='checkpoint'){const module=t.closest('form')?.dataset.module;if(module&&!state.checkpoints[module]){state.checkpointAnswers[module]??={};state.checkpointAnswers[module][id]=Number(t.value);}}saveState();}if(t.matches('[data-practice-field]')){state.practice.answers[t.dataset.practiceField]=t.value;saveState();}if(t.matches('[data-reflection]')){state.reflection[t.dataset.reflection]=t.value;state.reflection.saved=false;saveState();if($('#reflection-feedback'))$('#reflection-feedback').innerHTML='';}});
+document.addEventListener('change',event=>{const t=event.target;if(t.matches('select[data-practice-field]')){state.practice.answers[t.dataset.practiceField]=t.value;saveState();}});
+document.addEventListener('submit',event=>{event.preventDefault();const form=event.target;
+ if(form.id==='diagnostic-form'){if(state.diagnostic.result)return;if(DIAGNOSTIC.some(q=>state.diagnostic.answers[q.id]===undefined)){$('#diagnostic-error').textContent='Ответь на все три вопроса. Любой результат позволяет продолжить обучение.';return;}state.diagnostic.result={score:scoreAnswers(state.diagnostic.answers,DIAGNOSTIC)};saveState();render();toast('Диагностика завершена. Ниже доступны пояснения.');}
+ else if(form.id==='checkpoint-form'){const id=form.dataset.module,questions=CHECKPOINTS[id],answers=state.checkpointAnswers[id]||{};if(questions.some(q=>answers[q.id]===undefined)){showFeedback('checkpoint-feedback',false,'Ответь на каждый вопрос','Проверь, что в каждом вопросе выбран один вариант.');return;}const ok=scoreAnswers(answers,questions)===questions.length;$('#checkpoint-feedback').innerHTML=questions.map((q,i)=>`<div class="feedback ${answers[q.id]===q.answer?'ok':''}"><strong>${i+1}. ${answers[q.id]===q.answer?'Верно':'Нужно исправить'}</strong>${q.explain}${sourcesInline(q.source)}</div>`).join('');if(ok){state.checkpoints[id]=true;saveState();$('[data-action="complete-module"]').disabled=false;toast('Все ответы по модулю верны. Можно продолжить.');}}
+ else if(form.id==='charge-form'){const values=['qp','qn','qpi'].map(id=>numeric($('#'+id).value));if(values.some(x=>!Number.isFinite(x))){showFeedback('charge-feedback',false,'Нужно три числа','Введи заряды в единицах e, без букв. Можно использовать десятичную запятую или точку.');return;}const ok=values.every((v,i)=>Math.abs(v-[1,0,1][i])<0.001);showFeedback('charge-feedback',ok,ok?'Все три заряда найдены верно':'Проверь сложение зарядов',ok?'Ниже открыт подробный разбор.':'Сложи заряды всех валентных составляющих отдельно для каждой частицы. Для антикварка сначала измени знак заряда.');if(ok)markPractice('charge');}
+ else if(form.id==='decay-form'){const a=$('#decay-particle').value,b=$('#decay-reason').value;if(!a||!b){showFeedback('decay-feedback',false,'Нужны оба ответа','Выбери частицу и обоснование.');return;}const ok=a==='antineutrino'&&b==='lepton';showFeedback('decay-feedback',ok,ok?'Реакция восстановлена':'Проверь квантовые числа',ok?'Ниже открыт разбор с индексами и проверкой баланса.':'Один электрический заряд не позволяет различить все нейтральные частицы. Сравни также лептонное число до и после реакции.');if(ok)markPractice('decay');}
+ else if(form.id==='experiment-form'){const ids=['exp-particle','exp-crystal','exp-material','exp-reason'],values=ids.map(id=>$('#'+id).value);if(values.some(x=>!x)){showFeedback('experiment-feedback',false,'Заполни все четыре поля','Нужны три установки и обоснование.');return;}const ok=values.every((v,i)=>v===['lhc','skif','skif','purpose'][i]);showFeedback('experiment-feedback',ok,ok?'Выбор и объяснение верны':'Сравни цели исследований',ok?'Подробное объяснение открыто ниже.':'Различай изучение продуктов столкновения пучков и исследование образца внешним излучением. Ответь на вопрос, что именно измеряет эксперимент.');if(ok)markPractice('experiment');}
+ else if(form.id==='quarks-form'){const partner=$('#pion-partner').value,color=$('#color-partner').value,charge=numeric($('#qpiminus').value);if(!partner||!color||!Number.isFinite(charge)){showFeedback('quarks-feedback',false,'Заполни все три поля','Выбери антикварк, введи числовой заряд и выбери антицвет.');return;}const ok=partner==='anti-u'&&color==='antired'&&Math.abs(charge+1)<0.001;showFeedback('quarks-feedback',ok,ok?'Состав, заряд и антицвет верны':'Раздели электрический и цветовой заряды',ok?'Ниже открыт разбор.':'Посмотри на состав π⁻ в теории. Электрический заряд складывается отдельно от цвета. Для цветовой схемы нужен соответствующий антицвет.');if(ok)markPractice('quarks');}
+ else if(form.id==='beta-form'){const ids=['minus-a','minus-z','plus-a','plus-z','capture-a','capture-z'],values=ids.map(k=>numeric($('#beta-'+k).value));if(values.some(v=>!Number.isFinite(v))){showFeedback('beta-feedback',false,'Нужны шесть чисел','Заполни изменения A и Z для всех трёх процессов.');return;}const ok=values.every((v,i)=>v===[0,1,0,-1,0,-1][i]);showFeedback('beta-feedback',ok,ok?'Все изменения определены верно':'Проверь превращение нуклона',ok?'Сравнение трёх процессов открыто ниже.':'A считает все нуклоны, Z — только протоны. Определи для каждого процесса, какой нуклон превращается в какой, и вычисли разность «после минус до».');if(ok)markPractice('beta');}
+ else if(form.id==='quiz-form'){if(state.quiz.submitted)return;const missing=QUIZ.filter(q=>state.quiz.answers[q.id]===undefined);if(missing.length){$('#quiz-error').textContent='Пока не отвечено на '+missing.length+' из '+QUIZ.length+' вопросов.';$('#question-'+missing[0].id).scrollIntoView({behavior:'smooth',block:'start'});return;}state.quiz.attempts.push({date:new Date().toISOString(),answers:{...state.quiz.answers},score:scoreAnswers(state.quiz.answers)});state.quiz.submitted=true;saveState();render();window.scrollTo({top:0,behavior:'smooth'});toast('Тест проверен. Доступны результат и разбор.');}
+ else if(form.id==='reflection-form'){state.reflection.clarity=$('#clarity').value;state.reflection.insight=$('#insight').value.trim();state.reflection.difficulty=$('#difficulty').value.trim();if(!state.reflection.clarity||state.reflection.insight.length<10||state.reflection.difficulty.length<3){showFeedback('reflection-feedback',false,'Заполни рефлексию','Выбери понятность, опиши результат обучения (от 10 символов) и трудность или следующий вопрос (от 3 символов).');return;}state.reflection.saved=true;saveState();showFeedback('reflection-feedback',true,'Рефлексия сохранена','Теперь можно скачать отчёт в HTML или TXT. Данные остаются в этом браузере.');}
+ else if(form.id==='certificate-form'){if(!eligible()){showFeedback('certificate-feedback',false,'Учебные условия ещё не выполнены','Пройди оставшиеся шаги из списка.');return;}const name=$('#learner-name').value.trim().replace(/\s+/g,' ');if(name.length<2||name.length>80||/[<>\x00-\x1f]/.test(name)){showFeedback('certificate-feedback',false,'Проверь имя','От 2 до 80 символов, без угловых скобок и управляющих знаков.');return;}state.learnerName=name;const old=state.certificate;if(!old||old.name!==name||old.score!==bestScore())state.certificate={name,id:newID(),date:new Date().toISOString(),score:bestScore()};saveState();render();toast('Сертификат сформирован.');}
+});
+document.addEventListener('click',event=>{if(event.target.closest('.skip')){event.preventDefault();$('#main').focus({preventScroll:false});return;}const btn=event.target.closest('[data-action]');if(!btn)return;const action=btn.dataset.action;
+ if(action==='particle'){const p=PARTICLES[Number(btn.dataset.index)];$$('.particle').forEach(el=>el.setAttribute('aria-pressed','false'));btn.setAttribute('aria-pressed','true');$('#particle-detail').innerHTML=`<h4>${escapeHTML(p.symbol)} — ${escapeHTML(p.name)}</h4><p>${escapeHTML(p.detail)}</p>`;}
+ else if(action==='complete-module'){const id=btn.dataset.module;if(!state.checkpoints[id])return;if(!state.modules.includes(id))state.modules.push(id);saveState();location.hash={module1:'module2',module2:'module3',module3:'practice'}[id];}
+ else if(action==='retry-quiz'){state.quiz.answers={};state.quiz.submitted=false;saveState();render();window.scrollTo({top:0,behavior:'smooth'});}
+ else if(action==='download-report')downloadReportHTML();
+ else if(action==='download-report-txt')downloadText(reportText(),'Мой_результат_мини-курса.txt');
+ else if(action==='print-certificate')printCertificate();
+ else if(action==='png-certificate')downloadCertificatePNG();
+});
+$('#menu-toggle').addEventListener('click',()=>{const open=$('#sidebar').classList.toggle('open');$('#menu-toggle').setAttribute('aria-expanded',String(open));});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){$('#sidebar').classList.remove('open');$('#menu-toggle').setAttribute('aria-expanded','false');}});
+window.addEventListener('hashchange',()=>{render();window.scrollTo(0,0);$('#main').focus({preventScroll:true});});
+render();
+saveState();
+</script>
+</body>
+</html>
